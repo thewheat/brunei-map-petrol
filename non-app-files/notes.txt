@@ -1,0 +1,164 @@
+Based on https://bruneigeekmeet.com/masjid/
+
+Sources
+  - Main: http://www.bsm.com.bn/index.php/business-partner/retail-station
+  - Secondary: http://wikimapia.org/#lang=en&lat=4.647605&lon=114.683533&z=10&m=b&tag=6644
+  - Temp Android locations: https://play.google.com/store/apps/details?id=com.andromo.dev67372.app116024&hl=en
+
+Hand made map https://drive.google.com/open?id=1F71E4trL8uKv7HxPURr09BNntbE&usp=sharing
+
+================================================================================
+Extract Raw data from the main source page http://www.bsm.com.bn/index.php/business-partner/retail-station
+--------------------------------------------------------------------------------
+items = [];
+document.querySelectorAll("TD").forEach(function(e){
+	var nameEl = e.querySelectorAll("strong");
+	if(nameEl.length > 0){
+		var name = nameEl[0].innerText;
+		var closeEl = e.querySelectorAll("p")[0].cloneNode(true);
+		var close = closeEl.innerText.substring(name.length).trim();
+
+   	var facilitiesEl = e.querySelectorAll("p")[1];
+   	var facilities = [];
+
+		facilitiesEl.querySelectorAll("img").forEach(function(imgEl){
+			var dataParts = imgEl.src.split("/");
+			facilities.push(dataParts[dataParts.length-1].replace(".png", ""));
+		});
+		items.push({
+			name: name,
+			close: close,
+			facilities: facilities
+		})
+	}
+})
+console.log(items);
+
+
+================================================================================
+Extra location data from Temp Android locations  https://play.google.com/store/apps/details?id=com.andromo.dev67372.app116024&hl=en
+- backed up .apk file => rename to .zip => unzip find locations.json file
+--------------------------------------------------------------------------------
+var locations = [{"title":"Badan Tanmiah Petrol Station & Trading","description":"Lot 52509, Kampong Kuala Lurah, <br>Limau Manis, Jalan Mulaut Limau Manis, <br>BH1923, Brunei Darussalam<br>Telephone:\t +673 2683692<br>Opening Hours:\t 06.15 \u2013 21.15 (7 days a week)","latitude":"4.52513","longitude":"114.715454"},{"title":"Stesen Minyak Bebatik","description":"446A, Kampong Bebatik, <br>KM11, Jalan Mulaut Limau Manis, <br>BH3223, Brunei Darussalam<br>Telephone:\t +673 2650683<br>Opening Hours:\t 06.00 \u2013 21.00 (7 days a week)","latitude":"4.52513","longitude":"114.715454"},{"title":"Berakas Service and Filling Station","description":"Lot 15521, Kampong Lambak, <br>KM13,Jalan Pasir Berakas, Brunei Darussalam<br><br>Telephone:\t +673 2390898 <br>Opening Hours:\t (06.00 - 22.00) 7 Days a week","latitude":"4.52513","longitude":"114.715454"},{"title":"Bunut Shell Service Station","description":"LOT 8923 KG PERPINDAHAN BUNUT,  <br>KM 8,  JLN TUTONG, BUNUT, <br>BF1320, BRUNEI DARUSSALAM<br>Telephone:\t +673 2652674 ,BR>Opening Hours:\t (06.00 \u2013 00.00) 7 days a week","latitude":"4.610785","longitude":"114.703499"},{"title":"Dy Masni Service Station","description":"No. 9, Kampong Sungai Biawak, <br>Pekan Muara, Brunei Darussalam<br>Telephone:\t +673 2772579<br>Opening Hours:\t (06.00 \u2013 18.00) 7 days a week","latitude":"5.0285","longitude":"115.054211"},{"title":"GADONG FILLING STATION","description":"KM 3.5, Jalan Gadong <br>BE4119, Brunei Darussalam<br><br>Telephone:\t +673 2448985 <br>Opening Hours:\t (06.30 \u2013 22.00) 7 days a week","latitude":"4.930485","longitude":"114.886395"},{"title":"HJH BADARIAH SERVICE STATION","description":"Lot 8796, Kampong Sungai Lampai,<br>Jalan Kota Batu, BD2117 Brunei Darussalam<br><br>Telephone:\t +673 2228814 <br>Opening Hours:\t (06.30 \u2013 22.00) 7 days a week","latitude":"4.899425","longitude":"114.989162"},{"title":"IBA PETROL STATION & TRADING","description":"Lot 38554, Jalan Penghubung Lambak Kanan, <br>Berakas, Brunei Darussalam<br><br>Telephone:\t +673 2340069<br>Opening Hours:\t (06.00 \u2013 00.00) 7 days a week","latitude":"4.52513","longitude":"114.715454"},{"title":"KOPERASI KERJASAMA PERNIAGAAN & PERUSAHAAN MELAYU SERIA ( KPPM )","description":"LOT3415, JLN BUNGA KENAGA / KUNING, <br>P O BOX 49, SERIA, KUALA BELAIT, <br>KB1131, BRUNEI DARUSSALAM<br>Telephone:\t +673 3222934 <br>Opening Hours:\t (06.00 \u2013 21.00) 7 days a week","latitude":"4.582625","longitude":"114.187611"},{"title":"KOPERASI IKATAN TELUK MEWAH (ITM) BERHAD","description":"Lot 9434, Kg Mentiri, Jln Kota Batu ,<br>BU1929, Negara Brunei Darussalam<br><br>Telephone:\t +673 2790532 <br>Opening Hours:\t (06.30 \u2013 21.30) 7 days a week","latitude":"4.899425","longitude":"114.989162"},{"title":"KOPERASI MENJUAL MINYAK BERSAMA BERHAD TEMBURONG (KMMB )","description":"PEKAN BANGAR, BANGAR, TEMBURONG.BRUNEI DARUSSALAM  <br>Telephone:\t +673 5221562 <br>Opening Hours:\t (07.00 \u2013 19.00) 7 days a week","latitude":"4.71","longitude":"115.078709"},{"title":"KOTA BATU PETROL STATION","description":"No. 738, KM8, <br>Kampong Serdang, Jalan Kota Batu,<br> BD2117, Brunei Darussalam<br> <br>Telephone:\t +673 2236236, 2239239<br>Opening Hours:\t (07.00 \u2013 21.00) 7 days a week ","latitude":"4.899425","longitude":"114.989162"},{"title":"LUMUT PETROL SERVICE STATION","description":"LOT 3273, KG SG BAKONG LUMUT, <br>SERIA, KUALA BELAIT, <br>KC2935 BRUNEI DARUSSALAM  <br>Telephone:\t +673 3240449 <br>Opening Hours:\t (06.00 \u2013 22.00) 7 days a week ","latitude":"4.582625","longitude":"114.187611"},{"title":"MABOHAI SERVICE STATION","description":"No. 21, Jalan Kebangsaan,<br>Bandar Seri Begawan,<br> BA1111, Brunei Darussalam<br>  <br>Telephone:\t +673 2222424<br>Opening Hours:\t (06.30 \u2013 22.00) 7 days a week","latitude":"4.91273","longitude":"114.938473"},{"title":"MASJORY SERVICE STATION","description":"NO 1526, KG SENGKURONG \u2018A\u2019, BATU 10.5, <br>JLN TUTONG, SENGKURONG, BRUNEI MUARA, <br>BG1121, BRUNEI DARUSSALAM<br>Telephone:\t +673 2660175 <br>Opening Hours:\t (06.30 \u2013 22.00) 7 days a week","latitude":"4.610785","longitude":"114.703499"},{"title":"MAR'AZMALA PETROL STATION & TRADING","description":"Lot No 55461, EDR BD 46837, Jalan Jerudong, <br>BG 3122, Negara Brunei Darussalam<br><br>Telephone:\t +673 2610773 <br>Opening Hours:\t (06.00 \u2013 22.00) 7 days a week","latitude":"4.913005","longitude":"114.82328"},{"title":"PHA BAKAR B JAMBOL FILLING STATION","description":"NO 14, KG SURAN  TUTONG, <br>TUTONG, TA1741, BRUNEI DARUSSALAM<br>Telephone:\t +673 4222066 <br>Opening Hours:\t (06.30 \u2013 20.30) 7 days a week ","latitude":"4.610785","longitude":"114.703499"},{"title":"Stesen Minyak Dan Perkhidmatan Penglayan","description":"Lot 332, Batu 3, Kampong Penglayan <br>Jalan Muara, Brunei Darussalam<br><br>Telephone:\t +673 2790614 <br>Opening Hours:\t (07.00 \u2013 21.00) 7 days a week","latitude":"5.0285","longitude":"115.054211"},{"title":"ROXANA SHELL SERVICE STATION","description":"G22, JLN LORONG, TENGAH, SERIA, KUALA BELAIT, KB1733 BRUNEI DARUSSALAM<br>Telephone:\t +673 3223181 <br>Opening Hours:\t (06.00 \u2013 00.00) 7 days a week","latitude":"4.582625","longitude":"114.187611"},{"title":"SERI CHERMIN FILLING STATION","description":"NO 666, KG SG BESAR, <br>JLN KOTA BATU, KOTA BATU, BRUNEI MUARA, <br>BD2571, BRUNEI DARUSSALAM<br>Telephone:\t +673 2786344, 2786366 <br>Opening Hours:\t (05.00 \u2013 18.00) 7 days a week","latitude":"4.899425","longitude":"114.989162"},{"title":"STESEN MINYAK HANAS","description":"NO 516E, KG PELAMBAYAAN, <br>SG BRUNEI, BRUNEI MUARA, <br>BD2317, BRUNEI DARUSSALAM<br>Telephone:\t +673 2200118 <br>Opening Hours:\t (05.00 \u2013 18.00) 7 days a week","latitude":"4.91273","longitude":"114.938473"},{"title":" STESEN MINYAK KOPERASI DATARAN GONG TIGA (KODRAT)","description":"EDR 5572, LOT 5883, KG LAMUNIN, LAMUNIN, TUTONG, TG2343, BRUNEI DARUSSALAM<br>Telephone:\t +673 4237724 <brOpening Hours:\t (06.00 \u2013 00.00) 7 days a week","latitude":"4.610785","longitude":"114.703499"},{"title":"STESEN MINYAK KG KERIAM (PAKATAN)","description":"LOT NO 4458, KG KERIAM, <br>KM 36.5, JLN TUTONG KERIAM, TUTONG, <br>TB1141, BRUNEI DARUSSALAM<br>Telephone:\t +673 4221332 <br>Opening Hours:\t (06.30 \u2013 20.30) 7 days a week","latitude":"4.860435","longitude":"114.739155"},{"title":"STESEN MINYAK KOPERASI PELADANG KG SG TERABAN","description":"NO.47A, KG SG TERABAN, <br>KUALA BELAIT, KA3337, BRUNEI DARUSSALAM<br>Telephone:\t +673 3364397 <br>Opening Hours:\t (06.00 \u2013 22.00) 7 days a week","latitude":"4.582625","longitude":"114.187611"},{"title":"STESEN MINYAK PAKATAN","description":"NO 17, JLN ENCHE AWANG, <br>TUTONG, TA1341, BRUNEI DARUSSALAM<br>Telephone:\t +673 4261045 <br>Opening Hours:\t (06.00 \u2013 20.30) 7 days a week","latitude":"4.610785","longitude":"114.703499"},{"title":"STESEN MINYAK SYT AMANAH HJ ABDULLAH","description":"NO 1134, KM 13, JLN TUTONG, <br>KG KILANAS, KILANAS, BRUNEI MUARA, <br>BF2520, BRUNEI DARUSSALAM<br><br>+673 2661241 \t <br>(06.00 \u2013 00.00) 7 days a week","latitude":"4.849","longitude":"114.881512"},{"title":"STESEN MINYAK TAIB BERIBI","description":"LOT 54-53, COMPLEX, <br>PERINDUSTRIAN II, GADONG, BRUNEI MUARA, <br>BE1118, BRUNEI DARUSSALAM<br><br>+673 2455893, 2431580, 2450352, 2455892 \t<br> (06.00 \u2013 00.00) 7 days a week","latitude":"4.896765","longitude":"114.950153"},{"title":"Stesen Minyak Taib Delima","description":"Kampong Pancha Delima, <br>Jalan Berakas, Bandar Seri Begawan, <br>BB4513, Brunei Darussalam<br><br>+673 2335907, 2341416 \t<br>(06.00 \u2013 00.00) 7 days a week","latitude":"4.91273","longitude":"114.938473"},{"title":"STESEN MINYAK TASAMUL","description":"LOT NO 44519, JLN JUNJONGAN, <br>LUMAPAS, BRUNEI MUARA, <br>BJ3224, BRUNEI DARUSSALAM<br>+673 2640273 \t <br>(06.00 \u2013 22.00) 7 days a week","latitude":"4.896765","longitude":"114.950153"},{"title":"SYT PERNIAGAAN MELAYU (SPM,KB) SERVIC STN","description":"LOT 3770, JLN PANGLIMA, KUALA BELAIT, <br>KA3131, BRUNEI DARUSSALAM<br><br>+673 3332959 \t <br>(07.00 \u2013 21.00) 7 days a week","latitude":"4.582625","longitude":"114.187611"},{"title":"SYT KERJASAMA KG TG NANGKA (SATENAGA) DGN TANGGONGAN BHD","description":"1648, KG TG NANGKA,  <br>KM 18, JLN TUTONG,  P O BOX 2484, <br>TG NANGKA, BSB 8674, BRUNEI DARUSSALAM<br><br>+673 2660126 \t <br>(06.00 \u2013 22.00) 7 days a week","latitude":"4.683425","longitude":"114.735256"},{"title":"SYT KERJASAMA PEGAWAI \u2013 PEGAWAI DAN KAKITANGAN KERAJAAN ( SAPAKAT )","description":"LOT 5141, JLN SETIA NEGARA, <br>P O BOX 702, KUALA BELAIT, <br>KA1131, BRUNEI DARUSSALAM<br><br>+673 3331212 \t<br>(06.30 \u2013 21.00) 7 days a week","latitude":"4.582625","longitude":"114.187611"},{"title":"SYT PERNIAGAAN & PERUSAHAAN MELAYU BERHAD SERVICE STATION. (SPPMB) GADONG. ","description":"SPG 44, JLN GADONG,  <br>MENGLAIT, BRUNEI MUARA, <br>BE4119, BRUNEI DARUSSALAM<br><br>+673 2441658 \t <br>(06.00 \u2013 22.00) 7 days a week ","latitude":"4.896765","longitude":"114.950153"},{"title":"Syt Kerjasama Stesen Minyak Persatuan Tiba (KOTIBA)","description":"Lot 15443, Kampong Salambigar, <br>Jalan Muara, Brunei Darussalam<br><br>+673 2335905, 2331052 \t <br>(06.30 \u2013 22.00) 7 days a week","latitude":"5.0285","longitude":"115.054211"},{"title":"STESEN MINYAK NEGALANG MAJU SDN BHD","description":"3084, LOT 2257,  KG NEGALANG, <br>BATU APOI, TEMBURONG, <br>PC1151, BRUNEI DARUSSALAM <br><br>+673 5222777 \t <br>(07.30 \u2013 19.30) 7 days a week","latitude":"4.60408","longitude":"115.194572"},{"title":"TELISAI SERVICE STATION","description":"LOT NO 6707, KG TELISAI, TUTONG,<br> TC1145, BRUNEI DARUSSALAM<br><br>+673 4244306 \t<br> (06.00 \u2013 21.00) 7 days a week","latitude":"4.610785","longitude":"114.703499"},{"title":"TUMASEK PETROL & SERVICE STATION","description":"KM 3.5, JLN TUTONG, BRUNEI MUARA, <br>BA2111, BRUNEI DARUSSALAM<br><br>\t +673 2421815 \t<br> (07.00 \u2013 22.00) 7 days a week","latitude":"4.610785","longitude":"114.703499"},{"title":"Syarikat Minyak Majra","description":"Pulau Sibungur, Perairan Sungai Brunei, BRUNEI MUARA, BRUNEI DARUSSALAM<br><br>\t +673 2224166 \t<br> (05.00 \u2013 18.00) 7 days a week","latitude":"4.91273","longitude":"114.938473"}];
+
+================================================================================
+Manually location data from Temp Android locations
+to items in main source http://www.bsm.com.bn/index.php/business-partner/retail-station
+--------------------------------------------------------------------------------
+mapping = [
+{"title":"Badan Tanmiah Petrol Station & Trading",
+"source": "Kg. Kuala Lurah - SM Badan Tanmiah"},
+{"title":"Stesen Minyak Bebatik",
+"source": "Kg. Bebatik -SM Bebatik"},
+{"title":"Berakas Service and Filling Station",
+"source": "Berakas - SM Berakas"},
+{"title":"Bunut Shell Service Station",
+"source": "Bunut - SM Shahryza"},
+{"title":"Dy Masni Service Station",
+"source": "Pekan Muara - SM Dyg Masni"},
+{"title":"GADONG FILLING STATION",
+"source": "Gadong - SM Gadong"},
+{"title":"HJH BADARIAH SERVICE STATION",
+"source": "Kg. Sg Lampai - SM Hjh Badariah"},
+{"title":"IBA PETROL STATION & TRADING",
+"source": "Lambak - SM IBA"},
+{"title":"KOPERASI KERJASAMA PERNIAGAAN & PERUSAHAAN MELAYU SERIA ( KPPM )",
+"source": "Seria - SM KPPMB"},
+{"title":"KOPERASI IKATAN TELUK MEWAH (ITM) BERHAD",
+"source": "Kg. Mentiri - SM ITM"},
+{"title":"KOPERASI MENJUAL MINYAK BERSAMA BERHAD TEMBURONG (KMMB )",
+"source": "Pekan Bangar - SM KMMBT"},
+{"title":"KOTA BATU PETROL STATION",
+"source": "Kota Batu - SM Kota Batu"},
+{"title":"LUMUT PETROL SERVICE STATION",
+"source": "Lumut - SM Lumut"},
+{"title":"MABOHAI SERVICE STATION",
+"source": "Mabohai - SM Mabohai"},
+{"title":"MASJORY SERVICE STATION",
+"source": "Sengkurong - SM Masjory"},
+{"title":"MAR'AZMALA PETROL STATION & TRADING",
+"source": "Jerudong - Mar'azmala"},
+{"title":"PHA BAKAR B JAMBOL FILLING STATION",
+"source": "Kg. Suran - SM PHA Bakar"},
+{"title":"Stesen Minyak Dan Perkhidmatan Penglayan",
+"source": "Kg Kapok - SM Pengalayan"},
+{"title":"ROXANA SHELL SERVICE STATION",
+"source": "Seria - Roxana Service Station"},
+{"title":"SERI CHERMIN FILLING STATION",
+"source": "Kg. Sg Besar - SM Seri Chermin"},
+{"title":"STESEN MINYAK HANAS",
+"source": "Kg Peramu - SM Hanas"},
+{"title":" STESEN MINYAK KOPERASI DATARAN GONG TIGA (KODRAT)",
+"source": "Kg. Lamunin - SM KODRAT"},
+{"title":"STESEN MINYAK KG KERIAM (PAKATAN)",
+"source": "Kg. Keriam - SM Keriam"},
+{"title":"STESEN MINYAK KOPERASI PELADANG KG SG TERABAN",
+"source": "Kg. Sg Taraban - SM Koperasi Peladang"},
+{"title":"STESEN MINYAK PAKATAN",
+"source": "Pekan Tutong - SM Pakatan"},
+{"title":"STESEN MINYAK SYT AMANAH HJ ABDULLAH",
+"source": "Kilanas - SM Amanah"},
+{"title":"STESEN MINYAK TAIB BERIBI",
+"source": "Beribi - SM TAIB"},
+{"title":"Stesen Minyak Taib Delima",
+"source": "Kg Panca Delima - SM TAIB"},
+{"title":"STESEN MINYAK TASAMUL",
+"source": "Lumapas - SM Tasamul"},
+{"title":"SYT PERNIAGAAN MELAYU (SPM,KB) SERVIC STN",
+"source": "Jln Panglima - SM SPMKB"},
+{"title":"SYT KERJASAMA KG TG NANGKA (SATENAGA) DGN TANGGONGAN BHD",
+"source": "Kg. Tanjung Nangka - SM SATENAGA"},
+{"title":"SYT KERJASAMA PEGAWAI \u2013 PEGAWAI DAN KAKITANGAN KERAJAAN ( SAPAKAT )",
+"source": "Jln Setia Negara - SM SAPAKAT"},
+{"title":"Syt Kerjasama Stesen Minyak Persatuan Tiba (KOTIBA)",
+"source": "Kg. Salambigar - SM KOTIBA"},
+{"title":"STESEN MINYAK NEGALANG MAJU SDN BHD",
+"source": "Kg Negalang - SM Negalang"},
+{"title":"TELISAI SERVICE STATION",
+"source": "Kg. Telisai - SM Telisai"},
+{"title":"TUMASEK PETROL & SERVICE STATION",
+"source": "Jln Tutong - SM Tumasek"}
+]
+
+--------------------------------------------------------------------------------
+Unknown mappings - didn't rectify due to time constraints so just left out
+--------------------------------------------------------------------------------
+
+"title":"SYT PERNIAGAAN & PERUSAHAAN MELAYU BERHAD SERVICE STATION. (SPPMB) GADONG. ",
+"title":"Syarikat Minyak Majra",
+Menglait - SM KOPPMB
+Lubok Pulau - SM KOPEKLAP
+
+================================================================================
+Load main source http://www.bsm.com.bn/index.php/business-partner/retail-station
+Paste the following into console
+- locations.json from Temp Android locations  https://play.google.com/store/apps/details?id=com.andromo.dev67372.app116024&hl=en
+- mappings above
+--------------------------------------------------------------------------------
+items.forEach(function(e){
+   mapping.forEach(function(m){
+      var place = m.title;
+      var source = m.source;
+      if(m.source == e.name){
+        locations.forEach(function(l){
+          if(l.title == place){
+            e.latitude = (l.latitude)
+            e.longitude = (l.longitude)
+          }
+        })
+      }
+  })
+})
+JSON.stringify(items);
+================================================================================
+Final output for hackathon
+--------------------------------------------------------------------------------
+stations = [{"name":"Kg Kapok - SM Pengalayan","close":"6:30am - 9:00pm","facilities":["toilet","pam_tayar","kedai"],"latitude":"5.0285","longitude":"115.054211"},{"name":"Kg. Lamunin - SM KODRAT","close":"6:00am - 9:30pm","facilities":["toilet","pam_tayar"],"latitude":"4.610785","longitude":"114.703499"},{"name":"Kg. Keriam - SM Keriam","close":"6:30am - 8:30pm","facilities":["toilet","pam_tayar"],"latitude":"4.860435","longitude":"114.739155"},{"name":"Kg. Mentiri - SM ITM","close":"6:30am - 9:30pm","facilities":["toilet","pam_tayar","car_wash"],"latitude":"4.899425","longitude":"114.989162"},{"name":"Kg Panca Delima - SM TAIB","close":"6:00am - 11:30pm","facilities":["toilet","pam_tayar"],"latitude":"4.91273","longitude":"114.938473"},{"name":"Kg. Suran - SM PHA Bakar","close":"6:00am - 9:00pm","facilities":["toilet","pam_tayar"],"latitude":"4.610785","longitude":"114.703499"},{"name":"Pekan Tutong - SM Pakatan","close":"6:00am - 8:30pm","facilities":["toilet","pam_tayar"],"latitude":"4.610785","longitude":"114.703499"},{"name":"Kota Batu - SM Kota Batu","close":"7:00am - 7:00pm","facilities":["toilet","pam_tayar","car_wash"],"latitude":"4.899425","longitude":"114.989162"},{"name":"Gadong - SM Gadong","close":"6:30am - 10:00pm","facilities":["toilet","pam_tayar","service_center","foreign_pump"],"latitude":"4.930485","longitude":"114.886395"},{"name":"Kg. Telisai - SM Telisai","close":"6:00am - 9:00pm","facilities":["toilet","pam_tayar","kedai"],"latitude":"4.610785","longitude":"114.703499"},{"name":"Lubok Pulau - SM KOPEKLAP","close":"6:00am - 10:00pm","facilities":["toilet","pam_tayar","kedai","foreign_pump","Surau"]},{"name":"Kg. Sg Lampai - SM Hjh Badariah","close":"6:00am - 10:00pm","facilities":["toilet","pam_tayar"],"latitude":"4.899425","longitude":"114.989162"},{"name":"Menglait - SM KOPPMB","close":"6:00am - 10:00pm","facilities":["toilet","pam_tayar","service_center"]},{"name":"Kg. Salambigar - SM KOTIBA","close":"6:30am - 10:00pm","facilities":["toilet","pam_tayar","kedai","service_center"],"latitude":"5.0285","longitude":"115.054211"},{"name":"Beribi - SM TAIB","close":"6:00am - 10:00pm","facilities":["toilet","pam_tayar","atm"],"latitude":"4.896765","longitude":"114.950153"},{"name":"Seria - Roxana Service Station","close":"6:00am - 10:00pm","facilities":["toilet","pam_tayar","kedai","service_center","foreign_pump"],"latitude":"4.582625","longitude":"114.187611"},{"name":"Seria - SM KPPMB","close":"6:00am - 9:00pm","facilities":["toilet","pam_tayar","service_center","car_wash"],"latitude":"4.582625","longitude":"114.187611"},{"name":"Berakas - SM Berakas","close":"6:00am - 10:00pm","facilities":["toilet","pam_tayar","kedai"],"latitude":"4.52513","longitude":"114.715454"},{"name":"Mabohai - SM Mabohai","close":"7:00am - 10:00pm","facilities":["toilet","pam_tayar"],"latitude":"4.91273","longitude":"114.938473"},{"name":"Jln Panglima - SM SPMKB","close":"B \n7:00am - 10:00pm","facilities":["toilet","pam_tayar","service_center","car_wash"],"latitude":"4.582625","longitude":"114.187611"},{"name":"Jln Setia Negara - SM SAPAKAT","close":"6:30am - 9:30pm","facilities":["toilet","pam_tayar","service_center","car_wash"],"latitude":"4.582625","longitude":"114.187611"},{"name":"Lambak - SM IBA","close":"6:00am - 12:00am","facilities":["toilet","pam_tayar","kedai"],"latitude":"4.52513","longitude":"114.715454"},{"name":"Jln Tutong - SM Tumasek","close":"7:00am - 10:00pm","facilities":["toilet","pam_tayar","kedai","car_wash"],"latitude":"4.610785","longitude":"114.703499"},{"name":"Kg. Sg Taraban - SM Koperasi Peladang","close":"g  \n6:00am - 10:00pm","facilities":["toilet","pam_tayar","kedai","car_wash"],"latitude":"4.582625","longitude":"114.187611"},{"name":"Lumut - SM Lumut","close":"6:00am - 10:00pm","facilities":["toilet","pam_tayar","kedai"],"latitude":"4.582625","longitude":"114.187611"},{"name":"Kg. Tanjung Nangka - SM SATENAGA","close":"6:00am - 9:00pm","facilities":["toilet","pam_tayar"],"latitude":"4.683425","longitude":"114.735256"},{"name":"Bunut - SM Shahryza","close":"6:00am - 12:00am","facilities":["toilet","pam_tayar","kedai","foreign_pump"],"latitude":"4.610785","longitude":"114.703499"},{"name":"Kg. Bebatik -SM Bebatik","close":"6:00am - 9:00pm","facilities":["toilet","pam_tayar"],"latitude":"4.52513","longitude":"114.715454"},{"name":"Kilanas - SM Amanah","close":"6:00am - 12:00am","facilities":["toilet","pam_tayar"],"latitude":"4.849","longitude":"114.881512"},{"name":"Pekan Bangar - SM KMMBT","close":"7:00am 6:00pm","facilities":["toilet","pam_tayar","foreign_pump"],"latitude":"4.71","longitude":"115.078709"},{"name":"Kg Negalang - SM Negalang","close":"7:30am - 6:30pm","facilities":["toilet","pam_tayar","foreign_pump"],"latitude":"4.60408","longitude":"115.194572"},{"name":"Kg. Kuala Lurah - SM Badan Tanmiah","close":"6:15am - 9:15pm","facilities":["toilet","pam_tayar","kedai","foreign_pump"],"latitude":"4.52513","longitude":"114.715454"},{"name":"Sengkurong - SM Masjory","close":"6:00am 10:00pm","facilities":["toilet","pam_tayar"],"latitude":"4.610785","longitude":"114.703499"},{"name":"Jerudong - Mar'azmala","close":"6:00am - 10:00pm","facilities":["toilet","pam_tayar","kedai","foreign_pump","atm"],"latitude":"4.913005","longitude":"114.82328"},{"name":"Lumapas - SM Tasamul","close":"6:00am - 10:00pm","facilities":["toilet","pam_tayar","kedai","service_center"],"latitude":"4.896765","longitude":"114.950153"},{"name":"Kg. Sg Besar - SM Seri Chermin","close":"5:00am - 5:30pm","facilities":["toilet"],"latitude":"4.899425","longitude":"114.989162"},{"name":"Kg Peramu - SM Hanas","close":"5:00AM - 6:00pm","facilities":["toilet"],"latitude":"4.91273","longitude":"114.938473"}]
+
+================================================================================
+Post Hackathon
+--------------------------------------------------------------------------------
+Manually created map
+Hand made map https://drive.google.com/open?id=1F71E4trL8uKv7HxPURr09BNntbE&usp=sharing
+================================================================================
+--------------------------------------------------------------------------------
