@@ -1,11 +1,7 @@
 "use strict";
 
-//var appControllers = angular.module('introControllers', []);
-
-
-//appControllers.controller('mosqueCtrl', ['$scope', '$http', function ($scope, $http) {
-function mosqueCtrl($scope, $filter, $http){
-    $http.get("data/mosques.json").success(function(data) {
+function stationCtrl($scope, $filter, $http){
+    $http.get("data/stations.json").success(function(data) {
         for(var i = 0; i < data.length; i++){
             data[i].id = i;
             APP.map.initAddMarker({
@@ -24,19 +20,18 @@ function mosqueCtrl($scope, $filter, $http){
         "lng": APP.map.DEFAULT_CENTER.lng
     };
     $scope.showClosest = function(){
-        var closest = $filter('limitTo')($filter('orderBy')($scope.mosques, 'distance'), 1);
+        var closest = $filter('limitTo')($filter('orderBy')($scope.stations, 'distance'), 1);
         var marker = closest[0];
 
         APP.map.closest(marker.id);
     }
     $scope.clickMarker = function(id){
         APP.map.clickMarker(id);
-        // setLocation(mosque.lat, mosque.lng)
     }
     $scope.updateResults = function(data){
-        if(!data && $scope.mosques) data = $scope.mosques;
+        if(!data && $scope.stations) data = $scope.stations;
         else if (!data) {
-            $scope.UpdateResultsMessage = "No mosque data";
+            $scope.UpdateResultsMessage = "No station data";
             return;
         }
         for(var i = 0; i < data.length; i++){
@@ -64,7 +59,7 @@ function mosqueCtrl($scope, $filter, $http){
             }
             else data[i].distance =  i;
         }
-        $scope.mosques = data;
+        $scope.stations = data;
     };
     $scope.setLocation = function(lat, lng){
         if(!$scope.location) $scope.location = {};
@@ -215,7 +210,7 @@ APP.map = APP.map || (function(){
         markers = [];
     }
     function centerMapAndUpdate(coordinate){
-        var scope = angular.element(document.getElementById("mosqueCtrl")).scope();
+        var scope = angular.element(document.getElementById("stationCtrl")).scope();
         scope.setLocation(coordinate.lat, coordinate.lng);
         scope.showClosest();
         scope.$apply();

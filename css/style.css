@@ -23,6 +23,39 @@ body{
 		margin: 0.1em auto;
 		display: block;
 	}
+	ol.stations {
+	    list-style-position: inside;
+		padding:0;
+	}
+	.stations > li {
+		padding: 0.3em 0.5em 0.3em;
+	}
+	.stations .name {
+		font-weight: bold;
+	}
+	.stations .hours {
+		text-align: center;
+		font-weight: bold;
+	}
+	.even {
+		background-color: #ddd;
+	}
+	.stations ul.facilities {
+		display:inline;
+		padding: 0;
+	}
+	.stations li.facility {
+		padding-left: 1em;
+		display: inline;
+		list-style-type: none;
+	}
+	.stations .distance {
+		float: right;
+		font-size: 2em;
+	}
+	#footer{
+		padding: 1em;
+	}
 
 @media only screen and (min-width: 1024px) {
 	#find{

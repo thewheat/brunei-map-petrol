@@ -19,23 +19,24 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-app>
-	<div id="mosqueCtrl" ng-controller="mosqueCtrl" class="fluid" >
+	<div id="stationCtrl" ng-controller="stationCtrl" class="fluid" >
 		<input id="find" type="button" ng-cloak class="ng-cloak" value="Find Closest Shell Station {{findLocationMessage}}" ng-click="findLocation()">
 	    <div id="map-canvas"></div>
-		<ol class="mosques">
-			<li ng-repeat="mosque in mosques | filter:query | orderBy:'distance' | limitTo: 10" class="row">
-					<span class='span3'><a href="" ng-click="clickMarker(mosque.id)">{{mosque.name}}</a></span>
-					<span class='span3'>{{mosque.distance.toFixed(0)}} m</span>
-					<div class='span3'>{{mosque.close}}</div>
-					<span class='span3'>
-						<ul>
-							<li ng-repeat="facility in mosque.facilities">{{facility}}</li>
+		<ol class="stations">
+			<li ng-repeat="station in stations | filter:query | orderBy:'distance' | limitTo: 10" class="row" ng-class-even="'even'">
+					<span class='name'><a href="" ng-click="clickMarker(station.id)">{{station.name}}</a></span>
+					<strong class='distance'>{{station.distance.toFixed(0)}}m</strong>
+					<div class='hours'>{{station.close}}</div>
+					<span ng-if="station.facilities && station.facilities.length > 0">
+						<ul class="facilities">
+							<li class="facility" ng-repeat="facility in station.facilities">{{facility}}</li>
 						</ul>
 					</span>
+					
 			</li>
   		</ol>
 </div>
-	<div>Data from <a href="http://www.bsm.com.bn/index.php/business-partner/retail-station">bsm.com.bn</a>. Source: <a href="https://github.com/thewheat/brunei-map-petrol/"> on Github</a></div>
+	<div id="footer">Data from <a href="http://www.bsm.com.bn/index.php/business-partner/retail-station">bsm.com.bn</a>. Source: <a href="https://github.com/thewheat/brunei-map-petrol/"> on Github</a></div>
 	<script src="lib/angular/angular.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyAReROBMpqXsgxtK28CAVvYflWxAfzATmY"></script>
 
