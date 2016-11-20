@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Mana Minyak?</title>
+	<!-- mobile viewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    
+    <!-- ios webapp - hide safari toolbar -->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	<!-- icons, ipad3, iphone retina, ipad, iphone -->
+	<!-- not working well with Android. Samsung browser seems to work, Chrome doesn't.... -->
+    <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon" sizes="72x72"   href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon"                 href="ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon"                    href="ico/favicon.png">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app>
+	<div id="mosqueCtrl" ng-controller="mosqueCtrl" class="fluid" >
+		<input id="find" type="button" ng-cloak class="ng-cloak" value="Find Closest Shell Station {{findLocationMessage}}" ng-click="findLocation()">
+	    <div id="map-canvas"></div>
+		<ol class="mosques">
+			<li ng-repeat="mosque in mosques | filter:query | orderBy:'distance' | limitTo: 10" class="row"> 
+					<span class='span3'><a href="" ng-click="clickMarker(mosque.id)">{{mosque.name}}</a></span>				
+					<span class='span3'>{{mosque.distance.toFixed(0)}} m</span>
+					<div class='span3'>{{mosque.close}}</div>
+					<span class='span3'>
+						<ul>
+							<li ng-repeat="facility in mosque.facilities">{{facility}}</li>
+						</ul>
+					</span>
+			</li>
+  		</ol>
+</div>
+	<div>Data from <a href="http://www.bsm.com.bn/index.php/business-partner/retail-station">bsm.com.bn</a></div>
+	<script src="lib/angular/angular.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+	<script src="js/app.js"></script>
+</body>
+</html>
+
