@@ -1,5 +1,15 @@
 [
   {
+    "name": "Pekan Muara - SM Dyg Masni",
+    "close": "6:00am - 10:00pm",
+    "facilities": [
+      "toilet",
+      "pam_tayar"
+    ],
+    "lat": 5.0262083,
+    "lng": 115.069389
+  },
+  {
     "name": "Kg Kapok - SM Pengalayan",
     "close": "6:30am - 9:00pm",
     "facilities": [
@@ -7,8 +17,8 @@
       "pam_tayar",
       "kedai"
     ],
-    "lat": "5.0285",
-    "lng": "115.054211"
+    "lat": 5.0169465,
+    "lng": 115.03636119999999
   },
   {
     "name": "Kg. Lamunin - SM KODRAT",
@@ -17,8 +27,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.610785",
-    "lng": "114.703499"
+    "lat": 4.690377799999999,
+    "lng": 114.72170589999996
   },
   {
     "name": "Kg. Keriam - SM Keriam",
@@ -27,8 +37,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.860435",
-    "lng": "114.739155"
+    "lat": 4.8180226,
+    "lng": 114.71115680000003
   },
   {
     "name": "Kg. Mentiri - SM ITM",
@@ -38,8 +48,8 @@
       "pam_tayar",
       "car_wash"
     ],
-    "lat": "4.899425",
-    "lng": "114.989162"
+    "lat": 4.9565397,
+    "lng": 115.02055659999996
   },
   {
     "name": "Kg Panca Delima - SM TAIB",
@@ -48,8 +58,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.91273",
-    "lng": "114.938473"
+    "lat": 4.9400958,
+    "lng": 114.94102620000001
   },
   {
     "name": "Kg. Suran - SM PHA Bakar",
@@ -58,8 +68,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.610785",
-    "lng": "114.703499"
+    "lat": 4.8053395,
+    "lng": 114.66132010000001
   },
   {
     "name": "Pekan Tutong - SM Pakatan",
@@ -68,8 +78,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.610785",
-    "lng": "114.703499"
+    "lat": 4.803939099999999,
+    "lng": 114.65617099999997
   },
   {
     "name": "Kota Batu - SM Kota Batu",
@@ -79,8 +89,8 @@
       "pam_tayar",
       "car_wash"
     ],
-    "lat": "4.899425",
-    "lng": "114.989162"
+    "lat": 4.9022064,
+    "lng": 114.990938
   },
   {
     "name": "Gadong - SM Gadong",
@@ -91,8 +101,8 @@
       "service_center",
       "foreign_pump"
     ],
-    "lat": "4.930485",
-    "lng": "114.886395"
+    "lat": 4.9088518,
+    "lng": 114.92285579999998
   },
   {
     "name": "Kg. Telisai - SM Telisai",
@@ -102,8 +112,8 @@
       "pam_tayar",
       "kedai"
     ],
-    "lat": "4.610785",
-    "lng": "114.703499"
+    "lat": 4.727061499999999,
+    "lng": 114.55253629999993
   },
   {
     "name": "Lubok Pulau - SM KOPEKLAP",
@@ -114,7 +124,9 @@
       "kedai",
       "foreign_pump",
       "Surau"
-    ]
+    ],
+    "lat": 4.778332,
+    "lng": 114.65330519999998
   },
   {
     "name": "Kg. Sg Lampai - SM Hjh Badariah",
@@ -123,8 +135,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.899425",
-    "lng": "114.989162"
+    "lat": 4.8753716,
+    "lng": 114.95275509999999
   },
   {
     "name": "Menglait - SM KOPPMB",
@@ -133,7 +145,9 @@
       "toilet",
       "pam_tayar",
       "service_center"
-    ]
+    ],
+    "lat": 4.9099944,
+    "lng": 114.9226936
   },
   {
     "name": "Kg. Salambigar - SM KOTIBA",
@@ -144,8 +158,8 @@
       "kedai",
       "service_center"
     ],
-    "lat": "5.0285",
-    "lng": "115.054211"
+    "lat": 4.9794407,
+    "lng": 114.9873748
   },
   {
     "name": "Beribi - SM TAIB",
@@ -155,8 +169,8 @@
       "pam_tayar",
       "atm"
     ],
-    "lat": "4.896765",
-    "lng": "114.950153"
+    "lat": 4.894346800000001,
+    "lng": 114.9104261
   },
   {
     "name": "Seria - Roxana Service Station",
@@ -168,8 +182,8 @@
       "service_center",
       "foreign_pump"
     ],
-    "lat": "4.582625",
-    "lng": "114.187611"
+    "lat": 4.616889,
+    "lng": 114.33442170000001
   },
   {
     "name": "Seria - SM KPPMB",
@@ -180,8 +194,8 @@
       "service_center",
       "car_wash"
     ],
-    "lat": "4.582625",
-    "lng": "114.187611"
+    "lat": 4.6131837,
+    "lng": 114.32918789999997
   },
   {
     "name": "Berakas - SM Berakas",
@@ -191,8 +205,8 @@
       "pam_tayar",
       "kedai"
     ],
-    "lat": "4.52513",
-    "lng": "114.715454"
+    "lat": 4.9920303,
+    "lng": 114.9482828
   },
   {
     "name": "Mabohai - SM Mabohai",
@@ -201,8 +215,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.91273",
-    "lng": "114.938473"
+    "lat": 4.9021823,
+    "lng": 114.93930820000003
   },
   {
     "name": "Jln Panglima - SM SPMKB",
@@ -213,8 +227,8 @@
       "service_center",
       "car_wash"
     ],
-    "lat": "4.582625",
-    "lng": "114.187611"
+    "lat": 4.5857163,
+    "lng": 114.20273410000004
   },
   {
     "name": "Jln Setia Negara - SM SAPAKAT",
@@ -225,8 +239,8 @@
       "service_center",
       "car_wash"
     ],
-    "lat": "4.582625",
-    "lng": "114.187611"
+    "lat": 4.5779175,
+    "lng": 114.20373749999999
   },
   {
     "name": "Lambak - SM IBA",
@@ -236,8 +250,8 @@
       "pam_tayar",
       "kedai"
     ],
-    "lat": "4.52513",
-    "lng": "114.715454"
+    "lat": 4.9657671,
+    "lng": 114.95187229999999
   },
   {
     "name": "Jln Tutong - SM Tumasek",
@@ -248,8 +262,8 @@
       "kedai",
       "car_wash"
     ],
-    "lat": "4.610785",
-    "lng": "114.703499"
+    "lat": 4.8827343,
+    "lng": 114.9243864
   },
   {
     "name": "Kg. Sg Taraban - SM Koperasi Peladang",
@@ -260,8 +274,8 @@
       "kedai",
       "car_wash"
     ],
-    "lat": "4.582625",
-    "lng": "114.187611"
+    "lat": 4.582543199999999,
+    "lng": 114.15725850000001
   },
   {
     "name": "Lumut - SM Lumut",
@@ -271,8 +285,8 @@
       "pam_tayar",
       "kedai"
     ],
-    "lat": "4.582625",
-    "lng": "114.187611"
+    "lat": 4.657579900000001,
+    "lng": 114.45548559999997
   },
   {
     "name": "Kg. Tanjung Nangka - SM SATENAGA",
@@ -281,8 +295,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.683425",
-    "lng": "114.735256"
+    "lat": 4.8812732,
+    "lng": 114.83188029999997
   },
   {
     "name": "Bunut - SM Shahryza",
@@ -293,8 +307,8 @@
       "kedai",
       "foreign_pump"
     ],
-    "lat": "4.610785",
-    "lng": "114.703499"
+    "lat": 4.855093,
+    "lng": 114.89030960000002
   },
   {
     "name": "Kg. Bebatik -SM Bebatik",
@@ -303,8 +317,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.52513",
-    "lng": "114.715454"
+    "lat": 4.8499981,
+    "lng": 114.84354789999998
   },
   {
     "name": "Kilanas - SM Amanah",
@@ -313,8 +327,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.849",
-    "lng": "114.881512"
+    "lat": 4.875879400000001,
+    "lng": 114.86076909999997
   },
   {
     "name": "Pekan Bangar - SM KMMBT",
@@ -324,8 +338,8 @@
       "pam_tayar",
       "foreign_pump"
     ],
-    "lat": "4.71",
-    "lng": "115.078709"
+    "lat": 4.7020446,
+    "lng": 115.07483649999995
   },
   {
     "name": "Kg Negalang - SM Negalang",
@@ -335,8 +349,8 @@
       "pam_tayar",
       "foreign_pump"
     ],
-    "lat": "4.60408",
-    "lng": "115.194572"
+    "lat": 4.7295227,
+    "lng": 115.13129430000004
   },
   {
     "name": "Kg. Kuala Lurah - SM Badan Tanmiah",
@@ -347,8 +361,8 @@
       "kedai",
       "foreign_pump"
     ],
-    "lat": "4.52513",
-    "lng": "114.715454"
+    "lat": 4.7680156,
+    "lng": 114.82302230000005
   },
   {
     "name": "Sengkurong - SM Masjory",
@@ -357,8 +371,8 @@
       "toilet",
       "pam_tayar"
     ],
-    "lat": "4.610785",
-    "lng": "114.703499"
+    "lat": 4.887433199999999,
+    "lng": 114.84121619999996
   },
   {
     "name": "Jerudong - Mar'azmala",
@@ -370,8 +384,8 @@
       "foreign_pump",
       "atm"
     ],
-    "lat": "4.913005",
-    "lng": "114.82328"
+    "lat": 4.9492521,
+    "lng": 114.84098670000003
   },
   {
     "name": "Lumapas - SM Tasamul",
@@ -382,8 +396,8 @@
       "kedai",
       "service_center"
     ],
-    "lat": "4.896765",
-    "lng": "114.950153"
+    "lat": 4.8225829,
+    "lng": 114.90615609999998
   },
   {
     "name": "Kg. Sg Besar - SM Seri Chermin",
@@ -391,8 +405,8 @@
     "facilities": [
       "toilet"
     ],
-    "lat": "4.899425",
-    "lng": "114.989162"
+    "lat": 4.932973,
+    "lng": 115.01836290000006
   },
   {
     "name": "Kg Peramu - SM Hanas",
@@ -400,7 +414,7 @@
     "facilities": [
       "toilet"
     ],
-    "lat": "4.91273",
-    "lng": "114.938473"
+    "lat": 4.8881387,
+    "lng": 114.9778837
   }
 ]

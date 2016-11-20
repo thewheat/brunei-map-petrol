@@ -158,7 +158,22 @@ stations = [{"name":"Kg Kapok - SM Pengalayan","close":"6:30am - 9:00pm","facili
 ================================================================================
 Post Hackathon
 --------------------------------------------------------------------------------
-Manually created map
-Hand made map https://drive.google.com/open?id=1F71E4trL8uKv7HxPURr09BNntbE&usp=sharing
-================================================================================
+- Manually created map
+- Hand made map https://drive.google.com/open?id=1F71E4trL8uKv7HxPURr09BNntbE&usp=sharing
+- Save new output file
+	- Paste geojson file into console on main 
+	- Paste old source
+
+items.forEach(function(e){
+   geojson.features.forEach(function(g){
+      if(g.properties.description.trim() == e.name.trim()){
+        e.lat = g.geometry.coordinates[1];
+        e.lng = g.geometry.coordinates[0];
+      }
+  })
+})
+JSON.stringify(items);
+
 --------------------------------------------------------------------------------
+
+
