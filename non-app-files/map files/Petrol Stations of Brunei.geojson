@@ -1,0 +1,575 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.069389,
+                    5.0262083,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pekan Muara - Shell Service Station",
+                "description": "Pekan Muara - SM Dyg Masni"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.65330519999998,
+                    4.778332,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Lubok Pulau - Shell Service Station",
+                "description": "Lubok Pulau - SM KOPEKLAP  "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84121619999996,
+                    4.887433199999999,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Sengkurong - Shell Service Station",
+                "description": "Sengkurong - SM Masjory "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.20273410000004,
+                    4.5857163,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Jln Panglima - Shell Service Station",
+                "description": "Jln Panglima - SM SPMKB "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.20373749999999,
+                    4.5779175,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Jln Setia Negara - Shell Service Station",
+                "description": "Jln Setia Negara - SM SAPAKAT "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.03636119999999,
+                    5.0169465,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg Kapok - Shell Service Station",
+                "description": "Kg Kapok - SM Pengalayan "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.02055659999996,
+                    4.9565397,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Mentiri - Shell Service Station",
+                "description": "Kg. Mentiri - SM ITM "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.94102620000001,
+                    4.9400958,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg Panca Delima - Shell Service Station",
+                "description": "Kg Panca Delima - SM TAIB "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.95275509999999,
+                    4.8753716,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Sg Lampai - Shell Service Station",
+                "description": "Kg. Sg Lampai - SM Hjh Badariah"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.990938,
+                    4.9022064,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kota Batu - Shell Service Station",
+                "description": "Kota Batu - SM Kota Batu "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.92285579999998,
+                    4.9088518,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Gadong - Shell Service Station",
+                "description": "Gadong - SM Gadong "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.9226936,
+                    4.9099944,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Menglait - Shell Service Station",
+                "description": "Menglait - SM KOPPMB "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.9104261,
+                    4.894346800000001,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Beribi - Shell Service Station",
+                "description": "Beribi - SM TAIB"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.9873748,
+                    4.9794407,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Salambigar - Shell Service Station",
+                "description": "Kg. Salambigar - SM KOTIBA "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.9482828,
+                    4.9920303,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Berakas - Shell Service Station",
+                "description": "Berakas - SM Berakas "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.93930820000003,
+                    4.9021823,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Mabohai - Shell Service Station",
+                "description": "Mabohai - SM Mabohai"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.95187229999999,
+                    4.9657671,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Lambak - Shell Service Station",
+                "description": "Lambak - SM IBA "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.9243864,
+                    4.8827343,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Jln Tutong - Shell Service Station",
+                "description": "Jln Tutong - SM Tumasek "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.86076909999997,
+                    4.875879400000001,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kilanas - Shell Service Station",
+                "description": "Kilanas - SM Amanah "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.89030960000002,
+                    4.855093,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Bunut - Shell Service Station",
+                "description": "Bunut - SM Shahryza "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.83188029999997,
+                    4.8812732,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Tanjung Nangka - Shell Service Station",
+                "description": "Kg. Tanjung Nangka - SM SATENAGA "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84354789999998,
+                    4.8499981,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Bebatik - Shell Service Station",
+                "description": "Kg. Bebatik -SM Bebatik"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.82302230000005,
+                    4.7680156,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Kuala Lurah - Shell Service Station",
+                "description": "Kg. Kuala Lurah - SM Badan Tanmiah "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.90615609999998,
+                    4.8225829,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Lumapas - Shell Service Station",
+                "description": "Lumapas - SM Tasamul"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.84098670000003,
+                    4.9492521,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Jerudong - Shell Service Station",
+                "description": "Jerudong - Mar'azmala "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.01836290000006,
+                    4.932973,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Sg Besar - Shell Service Station",
+                "description": "Kg. Sg Besar - SM Seri Chermin"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.9778837,
+                    4.8881387,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg Peramu - Shell Service Station",
+                "description": "Kg Peramu - SM Hanas"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.07483649999995,
+                    4.7020446,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pekan Bangar - Shell Service Station",
+                "description": "Pekan Bangar - SM KMMBT"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.13129430000004,
+                    4.7295227,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg Negalang - Shell Service Station",
+                "description": "Kg Negalang - SM Negalang"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.45548559999997,
+                    4.657579900000001,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Lumut - Shell Service Station",
+                "description": "Lumut - SM Lumut "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.15725850000001,
+                    4.582543199999999,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Sg Taraban - Shell Service Station",
+                "description": "Kg. Sg Taraban - SM Koperasi Peladang "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.33442170000001,
+                    4.616889,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Seria - Roxana - Shell Service Station",
+                "description": "Seria - Roxana Service Station "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.32918789999997,
+                    4.6131837,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Seria - Shell Service Station",
+                "description": "Seria - SM KPPMB "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.55253629999993,
+                    4.727061499999999,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Telisai - Shell Service Station",
+                "description": "Kg. Telisai - SM Telisai "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.65617099999997,
+                    4.803939099999999,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pekan Tutong - Shell Service Station",
+                "description": "Pekan Tutong - SM Pakatan "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.66132010000001,
+                    4.8053395,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Suran - Shell Service Station",
+                "description": "Kg. Suran - SM PHA Bakar "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.71115680000003,
+                    4.8180226,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Keriam - Shell Service Station",
+                "description": "Kg. Keriam - SM Keriam "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.72170589999996,
+                    4.690377799999999,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kg. Lamunin - Shell Service Station",
+                "description": "Kg. Lamunin - SM KODRAT"
+            }
+        }
+    ]
+}

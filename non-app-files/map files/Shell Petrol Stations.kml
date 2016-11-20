@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Shell Petrol Stations</name>
+		<Placemark>
+			<name>Pekan Muara - Shell Service Station</name>
+			<description><![CDATA[Pekan Muara - SM Dyg Masni]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>115.069389,5.0262083,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Lubok Pulau - Shell Service Station</name>
+			<description><![CDATA[Lubok Pulau - SM KOPEKLAP  ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.65330519999998,4.778332,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Sengkurong - Shell Service Station</name>
+			<description><![CDATA[Sengkurong - SM Masjory ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.84121619999996,4.887433199999999,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Jln Panglima - Shell Service Station</name>
+			<description><![CDATA[Jln Panglima - SM SPMKB ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.20273410000004,4.5857163,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Jln Setia Negara - Shell Service Station</name>
+			<description><![CDATA[Jln Setia Negara - SM SAPAKAT ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.20373749999999,4.5779175,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg Kapok - Shell Service Station</name>
+			<description><![CDATA[Kg Kapok - SM Pengalayan ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>115.03636119999999,5.0169465,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Mentiri - Shell Service Station</name>
+			<description><![CDATA[Kg. Mentiri - SM ITM ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>115.02055659999996,4.9565397,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg Panca Delima - Shell Service Station</name>
+			<description><![CDATA[Kg Panca Delima - SM TAIB ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.94102620000001,4.9400958,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Sg Lampai - Shell Service Station</name>
+			<description><![CDATA[Kg. Sg Lampai - SM Hjh Badariah]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.95275509999999,4.8753716,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kota Batu - Shell Service Station</name>
+			<description><![CDATA[Kota Batu - SM Kota Batu ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.990938,4.9022064,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Gadong - Shell Service Station</name>
+			<description><![CDATA[Gadong - SM Gadong ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.92285579999998,4.9088518,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Menglait - Shell Service Station</name>
+			<description><![CDATA[Menglait - SM KOPPMB ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.9226936,4.9099944,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Beribi - Shell Service Station</name>
+			<description><![CDATA[Beribi - SM TAIB]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.9104261,4.894346800000001,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Salambigar - Shell Service Station</name>
+			<description><![CDATA[Kg. Salambigar - SM KOTIBA ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.9873748,4.9794407,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Berakas - Shell Service Station</name>
+			<description><![CDATA[Berakas - SM Berakas ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.9482828,4.9920303,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Mabohai - Shell Service Station</name>
+			<description><![CDATA[Mabohai - SM Mabohai]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.93930820000003,4.9021823,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Lambak - Shell Service Station</name>
+			<description><![CDATA[Lambak - SM IBA ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.95187229999999,4.9657671,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Jln Tutong - Shell Service Station</name>
+			<description><![CDATA[Jln Tutong - SM Tumasek ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.9243864,4.8827343,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kilanas - Shell Service Station</name>
+			<description><![CDATA[Kilanas - SM Amanah ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.86076909999997,4.875879400000001,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bunut - Shell Service Station</name>
+			<description><![CDATA[Bunut - SM Shahryza ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.89030960000002,4.855093,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Tanjung Nangka - Shell Service Station</name>
+			<description><![CDATA[Kg. Tanjung Nangka - SM SATENAGA ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.83188029999997,4.8812732,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Bebatik - Shell Service Station</name>
+			<description><![CDATA[Kg. Bebatik -SM Bebatik]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.84354789999998,4.8499981,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Kuala Lurah - Shell Service Station</name>
+			<description><![CDATA[Kg. Kuala Lurah - SM Badan Tanmiah ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.82302230000005,4.7680156,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Lumapas - Shell Service Station</name>
+			<description><![CDATA[Lumapas - SM Tasamul]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.90615609999998,4.8225829,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Jerudong - Shell Service Station</name>
+			<description><![CDATA[Jerudong - Mar'azmala ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.84098670000003,4.9492521,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Sg Besar - Shell Service Station</name>
+			<description><![CDATA[Kg. Sg Besar - SM Seri Chermin]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>115.01836290000006,4.932973,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg Peramu - Shell Service Station</name>
+			<description><![CDATA[Kg Peramu - SM Hanas]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.9778837,4.8881387,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pekan Bangar - Shell Service Station</name>
+			<description><![CDATA[Pekan Bangar - SM KMMBT]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>115.07483649999995,4.7020446,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg Negalang - Shell Service Station</name>
+			<description><![CDATA[Kg Negalang - SM Negalang]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>115.13129430000004,4.7295227,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Lumut - Shell Service Station</name>
+			<description><![CDATA[Lumut - SM Lumut ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.45548559999997,4.657579900000001,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Sg Taraban - Shell Service Station</name>
+			<description><![CDATA[Kg. Sg Taraban - SM Koperasi Peladang ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.15725850000001,4.582543199999999,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Seria - Roxana - Shell Service Station</name>
+			<description><![CDATA[Seria - Roxana Service Station ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.33442170000001,4.616889,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Seria - Shell Service Station</name>
+			<description><![CDATA[Seria - SM KPPMB ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.32918789999997,4.6131837,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Telisai - Shell Service Station</name>
+			<description><![CDATA[Kg. Telisai - SM Telisai ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.55253629999993,4.727061499999999,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pekan Tutong - Shell Service Station</name>
+			<description><![CDATA[Pekan Tutong - SM Pakatan ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.65617099999997,4.803939099999999,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Suran - Shell Service Station</name>
+			<description><![CDATA[Kg. Suran - SM PHA Bakar ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.66132010000001,4.8053395,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Keriam - Shell Service Station</name>
+			<description><![CDATA[Kg. Keriam - SM Keriam ]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.71115680000003,4.8180226,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kg. Lamunin - Shell Service Station</name>
+			<description><![CDATA[Kg. Lamunin - SM KODRAT]]></description>
+			<styleUrl>#icon-1899-0288D1</styleUrl>
+			<Point>
+				<coordinates>114.72170589999996,4.690377799999999,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Style id='icon-1899-0288D1-normal'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1899-0288D1-highlight'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1899-0288D1'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1899-0288D1-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>
