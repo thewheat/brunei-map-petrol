@@ -17,10 +17,12 @@ function stationCtrl($scope, $filter, $http, $timeout){
             });
         }
         $scope.filteredStations = $scope.stations = data;
-        $scope.calculateDistances();
-
     });
-
+    $scope.searchMapAndUpdate = function(){
+        $scope.searchMap();
+        $scope.calculateDistances();
+        $scope.showClosest($scope.filteredStations);
+    };
     $scope.searchMap = function(){
         var data = $scope.stations;
         var clearMarkers = [];
@@ -52,9 +54,6 @@ function stationCtrl($scope, $filter, $http, $timeout){
         else
             APP.map.updateMap();
 
-        $timeout(function(){
-            $scope.showClosest(data);
-        }, 500);
 
     }
 
@@ -131,14 +130,12 @@ function stationCtrl($scope, $filter, $http, $timeout){
                 if(!$scope.location) $scope.location = {};
                 $scope.location.lat = position.coords.latitude;
                 $scope.location.lng = position.coords.longitude;
-                $scope.searchMap();
                 APP.map.centerMapAndUpdate({"lat": $scope.location.lat, "lng": $scope.location.lng});
             }, function(err){
                 console.error("Error getting location", err)
                 // not sure why this doesn't set correctly without a delay *shrug*
                 $timeout(function(){
                     $scope.findLocationMessage = "Error loading location: " + err.message + ". Using default location";
-                    $scope.searchMap();
                     APP.map.centerMapAndUpdate({"lat": fallback_coordinate.lat, "lng": fallback_coordinate.lng});
                 }, 500);
             });
@@ -255,10 +252,7 @@ APP.map = APP.map || (function(){
         if(!markers || !markers.length) return;
         if(array){
             for(var i = 0; i < markers.length; i++){
-                if(array.indexOf(i) > -1)
-                    markers[i].libMarker.setMap(null);
-                else if (markers[i].libMarker.getMap() == null)
-                    markers[i].libMarker.setMap(map);
+                markers[i].libMarker.setVisible(array.indexOf(i) == -1);
             }
         }
         else{
@@ -269,8 +263,8 @@ APP.map = APP.map || (function(){
     function centerMapAndUpdate(coordinate){
         var scope = angular.element(document.getElementById("stationCtrl")).scope();
         scope.setLocation(coordinate.lat, coordinate.lng);
-        scope.calculateDistances();
-        scope.showClosest(scope.filteredStations);
+        scope.searchMapAndUpdate();
+        setTimeout(function(){scope.$apply(), 100;});
     }
     function clickMarker(id){
         google.maps.event.trigger(markers[id].libMarker, 'click');
