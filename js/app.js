@@ -39,7 +39,6 @@ function stationCtrl($scope, $filter, $http, $timeout){
                 data[i].distance =
                     (data[i].lat - $scope.location.lat)*(data[i].lat - $scope.location.lat) +
                     (data[i].lng - $scope.location.lng)*(data[i].lng - $scope.location.lng);
-
                 var lat1 = data[i].lat;
                 var lon1 = data[i].lng;
                 var lat2 = $scope.location.lat;
@@ -55,7 +54,8 @@ function stationCtrl($scope, $filter, $http, $timeout){
                         Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
                 var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
                 var d = R * c;
-                data[i].distance = d * 1000;
+                data[i].distance = d;
+
             }
             else data[i].distance =  i;
         }

@@ -26,7 +26,7 @@
 		<ol class="stations">
 			<li ng-repeat="station in stations | filter:query | orderBy:'distance' | limitTo: 10" class="row" ng-class-even="'even'">
 					<span class='name'><a href="" ng-click="clickMarker(station.id)">{{station.name}}</a></span>
-					<strong class='distance'>{{station.distance.toFixed(0)}}m</strong>
+					<strong class='distance'>{{station.distance.toFixed(2)}}km</strong>
 					<div class='hours'>{{station.close}}</div>
 					<span ng-if="station.facilities && station.facilities.length > 0">
 						<ul class="facilities">
