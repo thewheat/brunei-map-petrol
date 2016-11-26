@@ -1,6 +1,10 @@
 "use strict";
 
 function stationCtrl($scope, $filter, $http, $timeout){
+    $scope.searchFacilityData = {};
+    $scope.facilities = ["ATM","Car Wash","Pump","Pump (foreign)","Service Center","Shop","Surau","Toilet"];
+    $scope.searchOpen = true;
+
     $http.get("data/stations.json").success(function(data) {
         for(var i = 0; i < data.length; i++){
             data[i].id = i;
@@ -12,25 +16,70 @@ function stationCtrl($scope, $filter, $http, $timeout){
                 "facilities": data[i].facilities
             });
         }
-        $scope.updateResults(data);
+        $scope.filteredStations = $scope.stations = data;
+        $scope.calculateDistances();
+
     });
+
+    $scope.searchMap = function(){
+        var data = $scope.stations;
+        var clearMarkers = [];
+        if(!data) return;
+        var dataSearchFacility = [];
+
+        dataSearchFacility = dataSearchFacility.concat($scope.stations.filter(function(x,i){
+            var result = true;
+            for(var d in $scope.searchFacilityData){
+                if($scope.searchFacilityData[d]){
+                    result = result && (x.facilities.indexOf(d) > -1)
+                }
+            }
+            if($scope.searchOpen){
+                var nowDate = new Date();
+                var nowTime = nowDate.getHours() * 100 + nowDate.getMinutes();
+                result = result && x.open <= nowTime && nowTime <= x.close;
+            }
+
+            if(!result){
+                clearMarkers.push(i);
+            }
+            return result;
+        }));
+        data = dataSearchFacility;
+        $scope.filteredStations = data;
+        if(clearMarkers.length > 0)
+            APP.map.clearMarkers(clearMarkers);
+        else
+            APP.map.updateMap();
+
+        $timeout(function(){
+            $scope.showClosest(data);
+        }, 500);
+
+    }
 
     $scope.location = {
         "lat": APP.map.DEFAULT_CENTER.lat,
         "lng": APP.map.DEFAULT_CENTER.lng
     };
-    $scope.showClosest = function(){
-        var closest = $filter('limitTo')($filter('orderBy')($scope.stations, 'distance'), 1);
-        var marker = closest[0];
-
-        APP.map.closest(marker.id);
+    $scope.showClosest = function(data){
+        var closest = $filter('limitTo')($filter('orderBy')(data, 'distance'), 1);
+        if(closest){
+            var marker = closest[0];
+            APP.map.closest(marker ? marker.id : -1);
+        }
+        else{
+            APP.map.stopBounce();
+        }
     }
     $scope.clickMarker = function(id){
         APP.map.clickMarker(id);
     }
-    $scope.updateResults = function(data){
-        if(!data && $scope.stations) data = $scope.stations;
-        else if (!data) {
+    $scope.calculateDistances = function(){
+        var data = $scope.stations;
+        // if(!data && $scope.filteredStations) data = $scope.filteredStations;
+        // else if(!data && $scope.stations) data = $scope.stations;
+        if (!data) {
             $scope.UpdateResultsMessage = "No station data";
             return;
         }
@@ -65,19 +114,16 @@ function stationCtrl($scope, $filter, $http, $timeout){
         if(!$scope.location) $scope.location = {};
         $scope.location.lat = lat;
         $scope.location.lng = lng;
-        $scope.updateResults();
         APP.map.centerMap($scope.location);
     };
     $scope.dismissInfo = function(){
         $scope.findLocationMessage = "";
     }
-    $scope.findLocation = function(){
+    $scope.findLocation = function(fallback_coordinate){
         $scope.findLocationMessage = "Detecting location...";
         if (navigator.geolocation)
         {
             navigator.geolocation.getCurrentPosition(function(position){
-
-
                 $scope.findLocationMessage = "Location Found";
                 $timeout(function(){
                     $scope.findLocationMessage = "";
@@ -85,15 +131,16 @@ function stationCtrl($scope, $filter, $http, $timeout){
                 if(!$scope.location) $scope.location = {};
                 $scope.location.lat = position.coords.latitude;
                 $scope.location.lng = position.coords.longitude;
+                $scope.searchMap();
                 APP.map.centerMapAndUpdate({"lat": $scope.location.lat, "lng": $scope.location.lng});
             }, function(err){
                 console.error("Error getting location", err)
                 // not sure why this doesn't set correctly without a delay *shrug*
                 $timeout(function(){
-                    $scope.findLocationMessage = "Error loading location: " + err.message;
+                    $scope.findLocationMessage = "Error loading location: " + err.message + ". Using default location";
+                    $scope.searchMap();
+                    APP.map.centerMapAndUpdate({"lat": fallback_coordinate.lat, "lng": fallback_coordinate.lng});
                 }, 500);
-
-
             });
         }
         else{
@@ -133,19 +180,13 @@ APP.map = APP.map || (function(){
         google.maps.event.addListener(map, "click", function(event) {
             centerMapAndUpdate({"lat": event.latLng.lat(),"lng": event.latLng.lng()});
         });
-        google.maps.event.addListener(map, "dragend", function() {
-            centerMapAndUpdate({"lat": map.getCenter().lat(),"lng": map.getCenter().lng()});
-        });
-        google.maps.event.addListener(map, "resize", function() {
-            centerMapAndUpdate({"lat": map.getCenter().lat(),"lng": map.getCenter().lng()});
-        });
-        google.maps.event.addListener(map, "zoom", function() {
-            centerMapAndUpdate({"lat": map.getCenter().lat(),"lng": map.getCenter().lng()});
-        });
+
         for(var i = 0; initMarkers && i < initMarkers.length; i++){
           addMarker(initMarkers[i]);
         }
-        centerMapAndUpdate(DEFAULT_CENTER);
+
+        var scope = angular.element(document.getElementById("stationCtrl")).scope();
+        scope.findLocation(DEFAULT_CENTER);
     }
     function initAddMarker(markerData){
         if(map == null)
@@ -181,7 +222,6 @@ APP.map = APP.map || (function(){
           title: marker.name
         });
         google.maps.event.addListener(libMarker, "click", function(pos) {
-            // centerMapAndUpdate({"lat": pos.latLng.lat(),"lng": pos.latLng.lng()});
             centerMapAndUpdate({"lat": libMarker.position.lat(),"lng": libMarker.position.lng()});
         });
 
@@ -193,28 +233,44 @@ APP.map = APP.map || (function(){
             markers[i].libMarker  = createMapMarker(markers[i]);
         }
     }
+    function stopBounce(){
+        if(closestIndex >= 0){
+            markers[closestIndex].libMarker.setAnimation(null);
+            closestIndex = -1;
+        }
+    }
     function closest(i){
         if(closestIndex != i){
-            if(closestIndex >= 0)
-                markers[closestIndex].libMarker.setAnimation(null);
+            stopBounce();
             closestIndex = i;
-            markers[i].libMarker.setAnimation(google.maps.Animation.BOUNCE);
+            if(markers[i] && markers[i].libMarker){
+                markers[i].libMarker.setAnimation(google.maps.Animation.BOUNCE);
+            }
         }
     }
     function getMarkers(){
         return markers;
     }
-    function clearMarkers(){
+    function clearMarkers(array){
         if(!markers || !markers.length) return;
-        for(var i = 0; i < markers.length; i++)
-            markers[i].setMap(null);
-        markers = [];
+        if(array){
+            for(var i = 0; i < markers.length; i++){
+                if(array.indexOf(i) > -1)
+                    markers[i].libMarker.setMap(null);
+                else if (markers[i].libMarker.getMap() == null)
+                    markers[i].libMarker.setMap(map);
+            }
+        }
+        else{
+            for(var i = 0; i < markers.length; i++)
+                markers[i].libMarker.setMap(null);
+        }
     }
     function centerMapAndUpdate(coordinate){
         var scope = angular.element(document.getElementById("stationCtrl")).scope();
         scope.setLocation(coordinate.lat, coordinate.lng);
-        scope.showClosest();
-        scope.$apply();
+        scope.calculateDistances();
+        scope.showClosest(scope.filteredStations);
     }
     function clickMarker(id){
         google.maps.event.trigger(markers[id].libMarker, 'click');
@@ -246,10 +302,12 @@ APP.map = APP.map || (function(){
         initAddMarker: initAddMarker,
         getMarkers: getMarkers,
         clearMarkers: clearMarkers,
+        updateMap: updateMap,
         centerMap: centerMap,
         clickMarker: clickMarker,
         recenter: recenter,
         closest: closest,
+        stopBounce: stopBounce,
         centerMapAndUpdate: centerMapAndUpdate,
         DEFAULT_CENTER: DEFAULT_CENTER
     };

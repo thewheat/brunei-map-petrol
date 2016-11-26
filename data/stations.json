@@ -1,7 +1,8 @@
 [
   {
     "name": "Pekan Muara - SM Dyg Masni",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump"
@@ -11,7 +12,8 @@
   },
   {
     "name": "Kg Kapok - SM Pengalayan",
-    "close": "6:30am - 9:00pm",
+    "open": "0630",
+    "close": "2100",
     "facilities": [
       "Toilet",
       "Pump",
@@ -22,7 +24,8 @@
   },
   {
     "name": "Kg. Lamunin - SM KODRAT",
-    "close": "6:00am - 9:30pm",
+    "open": "0600",
+    "close": "2130",
     "facilities": [
       "Toilet",
       "Pump"
@@ -32,7 +35,8 @@
   },
   {
     "name": "Kg. Keriam - SM Keriam",
-    "close": "6:30am - 8:30pm",
+    "open": "0630",
+    "close": "2030",
     "facilities": [
       "Toilet",
       "Pump"
@@ -42,7 +46,8 @@
   },
   {
     "name": "Kg. Mentiri - SM ITM",
-    "close": "6:30am - 9:30pm",
+    "open": "0630",
+    "close": "2130",
     "facilities": [
       "Toilet",
       "Pump",
@@ -53,7 +58,8 @@
   },
   {
     "name": "Kg Panca Delima - SM TAIB",
-    "close": "6:00am - 11:30pm",
+    "open": "0600",
+    "close": "2330",
     "facilities": [
       "Toilet",
       "Pump"
@@ -63,7 +69,8 @@
   },
   {
     "name": "Kg. Suran - SM PHA Bakar",
-    "close": "6:00am - 9:00pm",
+    "open": "0600",
+    "close": "2100",
     "facilities": [
       "Toilet",
       "Pump"
@@ -73,7 +80,8 @@
   },
   {
     "name": "Pekan Tutong - SM Pakatan",
-    "close": "6:00am - 8:30pm",
+    "open": "0600",
+    "close": "2030",
     "facilities": [
       "Toilet",
       "Pump"
@@ -83,7 +91,8 @@
   },
   {
     "name": "Kota Batu - SM Kota Batu",
-    "close": "7:00am - 7:00pm",
+    "open": "0700",
+    "close": "1900",
     "facilities": [
       "Toilet",
       "Pump",
@@ -94,7 +103,8 @@
   },
   {
     "name": "Gadong - SM Gadong",
-    "close": "6:30am - 10:00pm",
+    "open": "0630",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -106,7 +116,8 @@
   },
   {
     "name": "Kg. Telisai - SM Telisai",
-    "close": "6:00am - 9:00pm",
+    "open": "0600",
+    "close": "2100",
     "facilities": [
       "Toilet",
       "Pump",
@@ -117,7 +128,8 @@
   },
   {
     "name": "Lubok Pulau - SM KOPEKLAP",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -130,7 +142,8 @@
   },
   {
     "name": "Kg. Sg Lampai - SM Hjh Badariah",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump"
@@ -140,7 +153,8 @@
   },
   {
     "name": "Menglait - SM KOPPMB",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -151,7 +165,8 @@
   },
   {
     "name": "Kg. Salambigar - SM KOTIBA",
-    "close": "6:30am - 10:00pm",
+    "open": "0630",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -163,7 +178,8 @@
   },
   {
     "name": "Beribi - SM TAIB",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -174,7 +190,8 @@
   },
   {
     "name": "Seria - Roxana Service Station",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -187,7 +204,8 @@
   },
   {
     "name": "Seria - SM KPPMB",
-    "close": "6:00am - 9:00pm",
+    "open": "0600",
+    "close": "2100",
     "facilities": [
       "Toilet",
       "Pump",
@@ -199,7 +217,8 @@
   },
   {
     "name": "Berakas - SM Berakas",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -210,7 +229,8 @@
   },
   {
     "name": "Mabohai - SM Mabohai",
-    "close": "7:00am - 10:00pm",
+    "open": "0700",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump"
@@ -220,7 +240,8 @@
   },
   {
     "name": "Jln Panglima - SM SPMKB",
-    "close": "7:00am - 10:00pm",
+    "open": "0700",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -232,7 +253,8 @@
   },
   {
     "name": "Jln Setia Negara - SM SAPAKAT",
-    "close": "6:30am - 9:30pm",
+    "open": "0630",
+    "close": "2130",
     "facilities": [
       "Toilet",
       "Pump",
@@ -244,7 +266,8 @@
   },
   {
     "name": "Lambak - SM IBA",
-    "close": "6:00am - 12:00am",
+    "open": "0600",
+    "close": "2400",
     "facilities": [
       "Toilet",
       "Pump",
@@ -255,7 +278,8 @@
   },
   {
     "name": "Jln Tutong - SM Tumasek",
-    "close": "7:00am - 10:00pm",
+    "open": "0700",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -267,7 +291,8 @@
   },
   {
     "name": "Kg. Sg Taraban - SM Koperasi Peladang",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -279,7 +304,8 @@
   },
   {
     "name": "Lumut - SM Lumut",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -290,7 +316,8 @@
   },
   {
     "name": "Kg. Tanjung Nangka - SM SATENAGA",
-    "close": "6:00am - 9:00pm",
+    "open": "0600",
+    "close": "2100",
     "facilities": [
       "Toilet",
       "Pump"
@@ -300,7 +327,8 @@
   },
   {
     "name": "Bunut - SM Shahryza",
-    "close": "6:00am - 12:00am",
+    "open": "0600",
+    "close": "2400",
     "facilities": [
       "Toilet",
       "Pump",
@@ -312,7 +340,8 @@
   },
   {
     "name": "Kg. Bebatik -SM Bebatik",
-    "close": "6:00am - 9:00pm",
+    "open": "0600",
+    "close": "2100",
     "facilities": [
       "Toilet",
       "Pump"
@@ -322,7 +351,8 @@
   },
   {
     "name": "Kilanas - SM Amanah",
-    "close": "6:00am - 12:00am",
+    "open": "0600",
+    "close": "2400",
     "facilities": [
       "Toilet",
       "Pump"
@@ -332,7 +362,8 @@
   },
   {
     "name": "Pekan Bangar - SM KMMBT",
-    "close": "7:00am - 6:00pm",
+    "open": "0700",
+    "close": "1800",
     "facilities": [
       "Toilet",
       "Pump",
@@ -343,7 +374,8 @@
   },
   {
     "name": "Kg Negalang - SM Negalang",
-    "close": "7:30am - 6:30pm",
+    "open": "0730",
+    "close": "1830",
     "facilities": [
       "Toilet",
       "Pump",
@@ -354,7 +386,8 @@
   },
   {
     "name": "Kg. Kuala Lurah - SM Badan Tanmiah",
-    "close": "6:15am - 9:15pm",
+    "open": "0615",
+    "close": "2115",
     "facilities": [
       "Toilet",
       "Pump",
@@ -366,7 +399,8 @@
   },
   {
     "name": "Sengkurong - SM Masjory",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump"
@@ -376,7 +410,8 @@
   },
   {
     "name": "Jerudong - Mar'azmala",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -389,7 +424,8 @@
   },
   {
     "name": "Lumapas - SM Tasamul",
-    "close": "6:00am - 10:00pm",
+    "open": "0600",
+    "close": "2200",
     "facilities": [
       "Toilet",
       "Pump",
@@ -401,7 +437,8 @@
   },
   {
     "name": "Kg. Sg Besar - SM Seri Chermin",
-    "close": "5:00am - 5:30pm",
+    "open": "0500",
+    "close": "1730",
     "facilities": [
       "Toilet"
     ],
@@ -410,7 +447,8 @@
   },
   {
     "name": "Kg Peramu - SM Hanas",
-    "close": "5:00AM - 6:00pm",
+    "open": "0500",
+    "close": "1800",
     "facilities": [
       "Toilet"
     ],
