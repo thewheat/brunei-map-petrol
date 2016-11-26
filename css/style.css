@@ -22,6 +22,7 @@ body{
 		padding: 0.2em;
 		margin: 0.1em auto;
 		display: block;
+		-webkit-appearance: none;
 	}
 	ol.stations {
 	    list-style-position: inside;
