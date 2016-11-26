@@ -82,6 +82,10 @@ body{
 		float: right;
 		font-size: 2em;
 	}
+	h3.error{
+		text-align: center;
+		color: #ff0000;
+	}
 	#footer{
 		padding: 1em;
 	}

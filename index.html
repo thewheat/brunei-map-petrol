@@ -29,7 +29,7 @@
 		</div>
 	    <div id="map-canvas"></div>
 		<div ng-class="{selected: findLocationMessage, hide: !findLocationMessage}" id="info">{{findLocationMessage}} <a href="#" ng-show="findLocationMessage" ng-click="dismissInfo()">[x]</a></div>
-		<h3 ng-cloak="filteredStations" ng-hide="filteredStations">None available! Reduce search criteria</h3>
+		<h3 class="error" ng-cloak="filteredStations" ng-hide="filteredStations">None available! Remove search filters to show results</h3>
 		<ol class="stations">
 			<li ng-repeat="station in filteredStations | orderBy:'distance' | limitTo: 5" class="row" ng-class-even="'even'">
 					<span class='name'><a href="" ng-click="clickMarker(station.id)">{{station.name}}</a></span>
