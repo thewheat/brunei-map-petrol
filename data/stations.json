@@ -3,8 +3,8 @@
     "name": "Pekan Muara - SM Dyg Masni",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 5.0262083,
     "lng": 115.069389
@@ -13,9 +13,9 @@
     "name": "Kg Kapok - SM Pengalayan",
     "close": "6:30am - 9:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai"
+      "Toilet",
+      "Pump",
+      "Shop"
     ],
     "lat": 5.0169465,
     "lng": 115.03636119999999
@@ -24,8 +24,8 @@
     "name": "Kg. Lamunin - SM KODRAT",
     "close": "6:00am - 9:30pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.690377799999999,
     "lng": 114.72170589999996
@@ -34,8 +34,8 @@
     "name": "Kg. Keriam - SM Keriam",
     "close": "6:30am - 8:30pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.8180226,
     "lng": 114.71115680000003
@@ -44,9 +44,9 @@
     "name": "Kg. Mentiri - SM ITM",
     "close": "6:30am - 9:30pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "car_wash"
+      "Toilet",
+      "Pump",
+      "Car Wash"
     ],
     "lat": 4.9565397,
     "lng": 115.02055659999996
@@ -55,8 +55,8 @@
     "name": "Kg Panca Delima - SM TAIB",
     "close": "6:00am - 11:30pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.9400958,
     "lng": 114.94102620000001
@@ -65,8 +65,8 @@
     "name": "Kg. Suran - SM PHA Bakar",
     "close": "6:00am - 9:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.8053395,
     "lng": 114.66132010000001
@@ -75,8 +75,8 @@
     "name": "Pekan Tutong - SM Pakatan",
     "close": "6:00am - 8:30pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.803939099999999,
     "lng": 114.65617099999997
@@ -85,9 +85,9 @@
     "name": "Kota Batu - SM Kota Batu",
     "close": "7:00am - 7:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "car_wash"
+      "Toilet",
+      "Pump",
+      "Car Wash"
     ],
     "lat": 4.9022064,
     "lng": 114.990938
@@ -96,10 +96,10 @@
     "name": "Gadong - SM Gadong",
     "close": "6:30am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "service_center",
-      "foreign_pump"
+      "Toilet",
+      "Pump",
+      "Service Center",
+      "Pump (foreign)"
     ],
     "lat": 4.9088518,
     "lng": 114.92285579999998
@@ -108,9 +108,9 @@
     "name": "Kg. Telisai - SM Telisai",
     "close": "6:00am - 9:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai"
+      "Toilet",
+      "Pump",
+      "Shop"
     ],
     "lat": 4.727061499999999,
     "lng": 114.55253629999993
@@ -119,10 +119,10 @@
     "name": "Lubok Pulau - SM KOPEKLAP",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai",
-      "foreign_pump",
+      "Toilet",
+      "Pump",
+      "Shop",
+      "Pump (foreign)",
       "Surau"
     ],
     "lat": 4.778332,
@@ -132,8 +132,8 @@
     "name": "Kg. Sg Lampai - SM Hjh Badariah",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.8753716,
     "lng": 114.95275509999999
@@ -142,9 +142,9 @@
     "name": "Menglait - SM KOPPMB",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "service_center"
+      "Toilet",
+      "Pump",
+      "Service Center"
     ],
     "lat": 4.9099944,
     "lng": 114.9226936
@@ -153,10 +153,10 @@
     "name": "Kg. Salambigar - SM KOTIBA",
     "close": "6:30am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai",
-      "service_center"
+      "Toilet",
+      "Pump",
+      "Shop",
+      "Service Center"
     ],
     "lat": 4.9794407,
     "lng": 114.9873748
@@ -165,9 +165,9 @@
     "name": "Beribi - SM TAIB",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "atm"
+      "Toilet",
+      "Pump",
+      "ATM"
     ],
     "lat": 4.894346800000001,
     "lng": 114.9104261
@@ -176,11 +176,11 @@
     "name": "Seria - Roxana Service Station",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai",
-      "service_center",
-      "foreign_pump"
+      "Toilet",
+      "Pump",
+      "Shop",
+      "Service Center",
+      "Pump (foreign)"
     ],
     "lat": 4.616889,
     "lng": 114.33442170000001
@@ -189,10 +189,10 @@
     "name": "Seria - SM KPPMB",
     "close": "6:00am - 9:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "service_center",
-      "car_wash"
+      "Toilet",
+      "Pump",
+      "Service Center",
+      "Car Wash"
     ],
     "lat": 4.6131837,
     "lng": 114.32918789999997
@@ -201,9 +201,9 @@
     "name": "Berakas - SM Berakas",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai"
+      "Toilet",
+      "Pump",
+      "Shop"
     ],
     "lat": 4.9920303,
     "lng": 114.9482828
@@ -212,8 +212,8 @@
     "name": "Mabohai - SM Mabohai",
     "close": "7:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.9021823,
     "lng": 114.93930820000003
@@ -222,10 +222,10 @@
     "name": "Jln Panglima - SM SPMKB",
     "close": "7:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "service_center",
-      "car_wash"
+      "Toilet",
+      "Pump",
+      "Service Center",
+      "Car Wash"
     ],
     "lat": 4.5857163,
     "lng": 114.20273410000004
@@ -234,10 +234,10 @@
     "name": "Jln Setia Negara - SM SAPAKAT",
     "close": "6:30am - 9:30pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "service_center",
-      "car_wash"
+      "Toilet",
+      "Pump",
+      "Service Center",
+      "Car Wash"
     ],
     "lat": 4.5779175,
     "lng": 114.20373749999999
@@ -246,9 +246,9 @@
     "name": "Lambak - SM IBA",
     "close": "6:00am - 12:00am",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai"
+      "Toilet",
+      "Pump",
+      "Shop"
     ],
     "lat": 4.9657671,
     "lng": 114.95187229999999
@@ -257,10 +257,10 @@
     "name": "Jln Tutong - SM Tumasek",
     "close": "7:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai",
-      "car_wash"
+      "Toilet",
+      "Pump",
+      "Shop",
+      "Car Wash"
     ],
     "lat": 4.8827343,
     "lng": 114.9243864
@@ -269,10 +269,10 @@
     "name": "Kg. Sg Taraban - SM Koperasi Peladang",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai",
-      "car_wash"
+      "Toilet",
+      "Pump",
+      "Shop",
+      "Car Wash"
     ],
     "lat": 4.582543199999999,
     "lng": 114.15725850000001
@@ -281,9 +281,9 @@
     "name": "Lumut - SM Lumut",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai"
+      "Toilet",
+      "Pump",
+      "Shop"
     ],
     "lat": 4.657579900000001,
     "lng": 114.45548559999997
@@ -292,8 +292,8 @@
     "name": "Kg. Tanjung Nangka - SM SATENAGA",
     "close": "6:00am - 9:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.8812732,
     "lng": 114.83188029999997
@@ -302,10 +302,10 @@
     "name": "Bunut - SM Shahryza",
     "close": "6:00am - 12:00am",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai",
-      "foreign_pump"
+      "Toilet",
+      "Pump",
+      "Shop",
+      "Pump (foreign)"
     ],
     "lat": 4.855093,
     "lng": 114.89030960000002
@@ -314,8 +314,8 @@
     "name": "Kg. Bebatik -SM Bebatik",
     "close": "6:00am - 9:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.8499981,
     "lng": 114.84354789999998
@@ -324,8 +324,8 @@
     "name": "Kilanas - SM Amanah",
     "close": "6:00am - 12:00am",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.875879400000001,
     "lng": 114.86076909999997
@@ -334,9 +334,9 @@
     "name": "Pekan Bangar - SM KMMBT",
     "close": "7:00am 6:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "foreign_pump"
+      "Toilet",
+      "Pump",
+      "Pump (foreign)"
     ],
     "lat": 4.7020446,
     "lng": 115.07483649999995
@@ -345,9 +345,9 @@
     "name": "Kg Negalang - SM Negalang",
     "close": "7:30am - 6:30pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "foreign_pump"
+      "Toilet",
+      "Pump",
+      "Pump (foreign)"
     ],
     "lat": 4.7295227,
     "lng": 115.13129430000004
@@ -356,10 +356,10 @@
     "name": "Kg. Kuala Lurah - SM Badan Tanmiah",
     "close": "6:15am - 9:15pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai",
-      "foreign_pump"
+      "Toilet",
+      "Pump",
+      "Shop",
+      "Pump (foreign)"
     ],
     "lat": 4.7680156,
     "lng": 114.82302230000005
@@ -368,8 +368,8 @@
     "name": "Sengkurong - SM Masjory",
     "close": "6:00am 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar"
+      "Toilet",
+      "Pump"
     ],
     "lat": 4.887433199999999,
     "lng": 114.84121619999996
@@ -378,11 +378,11 @@
     "name": "Jerudong - Mar'azmala",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai",
-      "foreign_pump",
-      "atm"
+      "Toilet",
+      "Pump",
+      "Shop",
+      "Pump (foreign)",
+      "ATM"
     ],
     "lat": 4.9492521,
     "lng": 114.84098670000003
@@ -391,10 +391,10 @@
     "name": "Lumapas - SM Tasamul",
     "close": "6:00am - 10:00pm",
     "facilities": [
-      "toilet",
-      "pam_tayar",
-      "kedai",
-      "service_center"
+      "Toilet",
+      "Pump",
+      "Shop",
+      "Service Center"
     ],
     "lat": 4.8225829,
     "lng": 114.90615609999998
@@ -403,7 +403,7 @@
     "name": "Kg. Sg Besar - SM Seri Chermin",
     "close": "5:00am - 5:30pm",
     "facilities": [
-      "toilet"
+      "Toilet"
     ],
     "lat": 4.932973,
     "lng": 115.01836290000006
@@ -412,7 +412,7 @@
     "name": "Kg Peramu - SM Hanas",
     "close": "5:00AM - 6:00pm",
     "facilities": [
-      "toilet"
+      "Toilet"
     ],
     "lat": 4.8881387,
     "lng": 114.9778837
