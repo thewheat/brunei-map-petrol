@@ -1,6 +1,6 @@
 "use strict";
 
-function stationCtrl($scope, $filter, $http){
+function stationCtrl($scope, $filter, $http, $timeout){
     $http.get("data/stations.json").success(function(data) {
         for(var i = 0; i < data.length; i++){
             data[i].id = i;
@@ -74,13 +74,14 @@ function stationCtrl($scope, $filter, $http){
         {
             navigator.geolocation.getCurrentPosition(function(position){
                 $scope.findLocationMessage = "Location Found";
+                $timeout(function(){
+                    $scope.findLocationMessage = "";
+                }, 500);
+
                 if(!$scope.location) $scope.location = {};
                 $scope.location.lat = position.coords.latitude;
                 $scope.location.lng = position.coords.longitude;
-                APP.map.centerMap({"lat": $scope.location.lat, "lng": $scope.location.lng});
-                $scope.updateResults();
-                $scope.findLocationMessage = "";
-                $scope.$apply();
+                APP.map.centerMapAndUpdate({"lat": $scope.location.lat, "lng": $scope.location.lng});
             });
         }
         else{
@@ -237,6 +238,7 @@ APP.map = APP.map || (function(){
         clickMarker: clickMarker,
         recenter: recenter,
         closest: closest,
+        centerMapAndUpdate: centerMapAndUpdate,
         DEFAULT_CENTER: DEFAULT_CENTER
     };
 }());
