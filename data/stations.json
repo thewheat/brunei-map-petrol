@@ -332,7 +332,7 @@
   },
   {
     "name": "Pekan Bangar - SM KMMBT",
-    "close": "7:00am 6:00pm",
+    "close": "7:00am - 6:00pm",
     "facilities": [
       "Toilet",
       "Pump",
@@ -366,7 +366,7 @@
   },
   {
     "name": "Sengkurong - SM Masjory",
-    "close": "6:00am 10:00pm",
+    "close": "6:00am - 10:00pm",
     "facilities": [
       "Toilet",
       "Pump"
