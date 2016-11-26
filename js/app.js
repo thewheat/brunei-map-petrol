@@ -113,7 +113,8 @@ APP.map = APP.map || (function(){
     function load(){
         var mapOptions = {
             zoom: 12,
-            center: new google.maps.LatLng(DEFAULT_CENTER.lat, DEFAULT_CENTER.lng)
+            center: new google.maps.LatLng(DEFAULT_CENTER.lat, DEFAULT_CENTER.lng),
+            gestureHandling: 'greedy'
         };
         map = new google.maps.Map(mapElement, mapOptions);
         centerMap(DEFAULT_CENTER);
