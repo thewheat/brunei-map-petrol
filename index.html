@@ -22,7 +22,7 @@
 	<div id="stationCtrl" ng-controller="stationCtrl" class="fluid" >
 		<input id="find" type="button" ng-cloak class="ng-cloak" value="Find Closest Shell Station" ng-click="findLocation()">
 	    <div id="map-canvas"></div>
-		<div ng-class="{selected: findLocationMessage, hide: !findLocationMessage}" id="info">{{findLocationMessage}}</div>
+		<div ng-class="{selected: findLocationMessage, hide: !findLocationMessage}" id="info">{{findLocationMessage}} <a href="#" ng-show="findLocationMessage" ng-click="dismissInfo()">[x]</a></div>
 		<ol class="stations">
 			<li ng-repeat="station in stations | filter:query | orderBy:'distance' | limitTo: 10" class="row" ng-class-even="'even'">
 					<span class='name'><a href="" ng-click="clickMarker(station.id)">{{station.name}}</a></span>

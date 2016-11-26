@@ -68,20 +68,32 @@ function stationCtrl($scope, $filter, $http, $timeout){
         $scope.updateResults();
         APP.map.centerMap($scope.location);
     };
+    $scope.dismissInfo = function(){
+        $scope.findLocationMessage = "";
+    }
     $scope.findLocation = function(){
         $scope.findLocationMessage = "Detecting location...";
         if (navigator.geolocation)
         {
             navigator.geolocation.getCurrentPosition(function(position){
+
+
                 $scope.findLocationMessage = "Location Found";
                 $timeout(function(){
                     $scope.findLocationMessage = "";
                 }, 500);
-
                 if(!$scope.location) $scope.location = {};
                 $scope.location.lat = position.coords.latitude;
                 $scope.location.lng = position.coords.longitude;
                 APP.map.centerMapAndUpdate({"lat": $scope.location.lat, "lng": $scope.location.lng});
+            }, function(err){
+                console.error("Error getting location", err)
+                // not sure why this doesn't set correctly without a delay *shrug*
+                $timeout(function(){
+                    $scope.findLocationMessage = "Error loading location: " + err.message;
+                }, 500);
+
+
             });
         }
         else{
