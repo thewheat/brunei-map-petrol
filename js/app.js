@@ -97,7 +97,6 @@ APP.map = APP.map || (function(){
     var initMarkers;
     var markers;
     var center;
-    var openWindow;
     var closestIndex = -1;
     function init(element){
         mapElement = element;
@@ -171,22 +170,9 @@ APP.map = APP.map || (function(){
         google.maps.event.addListener(libMarker, "click", function(pos) {
             // centerMapAndUpdate({"lat": pos.latLng.lat(),"lng": pos.latLng.lng()});
             centerMapAndUpdate({"lat": libMarker.position.lat(),"lng": libMarker.position.lng()});
-            openMarkerInfo(libMarker);
-
         });
 
         return libMarker;
-    }
-    function openMarkerInfo(libMarker){
-      if(openWindow) openWindow.close();
-      if(!libMarker.infowindow)
-      {
-          libMarker.infowindow = new google.maps.InfoWindow({
-            content: libMarker.title
-          });
-      }
-      libMarker.infowindow.open(map,libMarker);
-      openWindow = libMarker.infowindow;
     }
     function updateMap(){
         clearMarkers();
@@ -195,11 +181,12 @@ APP.map = APP.map || (function(){
         }
     }
     function closest(i){
-        if(closestIndex >= 0)
-            markers[closestIndex].libMarker.setAnimation(null);
-        closestIndex = i;
-        markers[i].libMarker.setAnimation(google.maps.Animation.BOUNCE);
-        openMarkerInfo(markers[i].libMarker);
+        if(closestIndex != i){
+            if(closestIndex >= 0)
+                markers[closestIndex].libMarker.setAnimation(null);
+            closestIndex = i;
+            markers[i].libMarker.setAnimation(google.maps.Animation.BOUNCE);
+        }
     }
     function getMarkers(){
         return markers;
