@@ -18,26 +18,27 @@
 
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-app>
+<body ng-app="myApp">
 	<div id="stationCtrl" ng-controller="stationCtrl" class="fluid" >
 		<input id="find" type="button" ng-cloak class="ng-cloak" value="Find Closest Shell Station" ng-click="findLocation()">
 		<div id="search">
-			<label><input type="checkbox" ng-model="searchOpen" ng-change="searchMapAndUpdate()">Search only open</label>
+			<strong>Search:</strong> <label><input type="checkbox" ng-model="searchOpen" ng-change="searchMapAndUpdate()">Currently open</label><br>
 			<span ng-repeat="facility in facilities" class="search" name="facility">
-					<label ng-show="facility"><input type="checkbox" ng-model="searchFacilityData[facility]" ng-change="searchMapAndUpdate()" value="{{facility}}">{{facility}}</label>
+					<label ng-show="facility"><input type="checkbox" ng-model="searchFacilityData[facility]" ng-change="searchMapAndUpdate()" value="{{facility}}">{{facility | nbsp}}</label>
 			</span>
 		</div>
 	    <div id="map-canvas"></div>
 		<div ng-class="{selected: findLocationMessage, hide: !findLocationMessage}" id="info">{{findLocationMessage}} <a href="#" ng-show="findLocationMessage" ng-click="dismissInfo()">[x]</a></div>
 		<h3 class="error" ng-cloak="filteredStations" ng-hide="filteredStations">None available! Remove search filters to show results</h3>
 		<ol class="stations">
-			<li ng-repeat="station in filteredStations | orderBy:'distance' | limitTo: 5" class="row" ng-class-even="'even'">
+			<li ng-repeat="station in filteredStations | orderBy:'distance' | limitTo: 5" class="row" ng-class-even="'even'" ng-class-odd="'odd'">
 					<span class='name'><a href="" ng-click="clickMarker(station.id)">{{station.name}}</a></span>
-					<strong class='distance'>{{station.distance.toFixed(2)}}km</strong>
-					<div class='hours'>{{station.open}} - {{station.close}}</div>
+					<strong ng-show="station.distance" class='distance'>{{station.distance.toFixed(2)}}km</strong>
+					<div class='hours'>{{station.open | formatTime}} - {{station.close | formatTime}}</div>
+					<h5 class="directions"><a target="_blank" href="https://www.google.com/maps/dir/{{location.lat}},{{location.lng}}/{{station.lat}},{{station.lng}}/@{{location.lat}},{{location.lng}},16z/data=!4m2!4m1!3e0">Directions</a></h5>
 					<span ng-if="station.facilities && station.facilities.length > 0">
 						<ul class="facilities">
-							<li class="facility" ng-repeat="facility in station.facilities">[{{facility}}]</li>
+							<li class="facility" ng-repeat="facility in station.facilities">{{facility | nbsp}}</li>
 						</ul>
 					</span>
 					

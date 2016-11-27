@@ -5,13 +5,17 @@ body{
 	margin: 0;
 	width: 100%;
 }
-
+label{
+	  white-space: nowrap;display:inline;
+}
 	#map-canvas {
 		width: 90%;
-		height: 50%;
+		height: 60%;
 		margin: 0 auto;
 	}
-
+	a, a:visited {
+		color: #00c;
+	}
 	#search{
 		margin: 0 auto;
 		text-align: center;
@@ -66,21 +70,34 @@ body{
 		text-align: center;
 		font-weight: bold;
 	}
-	.even {
-		background-color: #ddd;
+	.odd {
+		background-color: #eaeaea;
 	}
 	.stations ul.facilities {
 		display:inline;
 		padding: 0;
+		font-size: 0.8em;
 	}
 	.stations li.facility {
-		padding-left: 1em;
 		display: inline;
 		list-style-type: none;
 	}
+	.facility{
+		background-color: #e9e8e6;
+		border: 1px solid gray;
+		margin-right: 0.5em;
+		padding: 3px;
+		line-height: 2em;
+	}
+
 	.stations .distance {
 		float: right;
-		font-size: 2em;
+		font-size: 1.5em;
+	}
+	.stations .directions{
+		clear: both;
+		float: right;
+		margin:0;
 	}
 	h3.error{
 		text-align: center;

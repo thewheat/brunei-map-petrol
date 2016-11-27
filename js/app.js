@@ -1,6 +1,9 @@
 "use strict";
 
-function stationCtrl($scope, $filter, $http, $timeout){
+
+var appControllers = angular.module('appControllers', []);
+var appFilters = angular.module('appFilters', []);
+appControllers.controller('stationCtrl', ['$scope', '$filter', '$http', '$timeout', '$q', function($scope, $filter, $http, $timeout, $q) {
     $scope.searchFacilityData = {};
     $scope.facilities = ["ATM","Car Wash","Pump","Pump (foreign)","Service Center","Shop","Surau","Toilet"];
     $scope.searchOpen = true;
@@ -22,7 +25,43 @@ function stationCtrl($scope, $filter, $http, $timeout){
         $scope.searchMap();
         $scope.calculateDistances();
         $scope.showClosest($scope.filteredStations);
+
+        $scope.findLocationMessage = "Calculating driving distance...";
+        $timeout(function(){
+            $scope.calculateActualDistances($scope.filteredStations);
+        },100);
     };
+
+    $scope.calculateActualDistances = function(data){
+        function getURL(source, destination){
+            return "//polar-cliffs-15537.herokuapp.com/distances.php?" +
+                "&origins=" + source.lat + "," + source.lng +
+                "&destinations="+closest[i].lat+","+closest[i].lng+
+                "&name=" + destination.name +
+                "&distance=" + destination.distance +
+                "&index=" + destination.id +
+                "";
+        }
+        var closest = $filter('limitTo')($filter('orderBy')(data, 'distance'), 5);
+        $scope.findLocationMessage = "Finding accurate distances";
+
+        var promises = [];
+        for(var i = 0; i < closest.length; i++){
+            promises.push($http.get(getURL($scope.location,closest[i])));
+        }
+        $q.all(promises).then(function (results) {
+            var answers = [];
+            for(var i = 0; i < closest.length; i++){
+                $scope.stations[closest[i].id].distance = (results[i].data.distance.value/1000);
+            }
+            $timeout(function(){
+                $scope.$apply();
+                $scope.showClosest($scope.filteredStations);
+                $scope.findLocationMessage = "";
+            }, 100);
+        });
+    }
+
     $scope.searchMap = function(){
         var data = $scope.stations;
         var clearMarkers = [];
@@ -145,7 +184,7 @@ function stationCtrl($scope, $filter, $http, $timeout){
         }
     };
   }
-//]);
+]);
 
 var APP = {};
 APP.map = APP.map || (function(){
@@ -264,7 +303,7 @@ APP.map = APP.map || (function(){
         var scope = angular.element(document.getElementById("stationCtrl")).scope();
         scope.setLocation(coordinate.lat, coordinate.lng);
         scope.searchMapAndUpdate();
-        setTimeout(function(){scope.$apply(), 100;});
+        setTimeout(function(){ scope.$apply() }, 100);
     }
     function clickMarker(id){
         google.maps.event.trigger(markers[id].libMarker, 'click');
@@ -307,4 +346,35 @@ APP.map = APP.map || (function(){
     };
 }());
 APP.map.init(document.getElementById("map-canvas"));
-google.maps.event.addDomListener(window, "load", function(){ console.log("load map"); APP.map.load() });
+google.maps.event.addDomListener(window, "load", function(){ APP.map.load() });
+
+
+var appFilters = angular.module('appFilters', []);
+appFilters.filter('nbsp', function() {
+    return function(input) {
+        return input.replace(/ /g, "\xa0");
+    }
+});
+appFilters.filter('formatTime', function() {
+  return function(input) {
+    var inputAsString = "" + input;
+    var hours = inputAsString.substr(0,inputAsString.length-2);
+    var minutes = inputAsString.substr(-2);
+    var suffix = "";
+    if(hours < 12) suffix = "am";
+    else suffix = "pm";
+    if(hours == "12" && minutes == "00")
+        suffix = "nn";
+    else if((hours == "00" || hours == "24") && minutes == "00")
+        suffix = "md";
+
+    var hoursAsNum = parseInt(hours);
+    if(hoursAsNum > 12) hoursAsNum -= 12;
+    return hoursAsNum + (minutes != "00" ? (":" + minutes) : "") + "" + suffix;
+  };
+});
+
+var theApp = angular.module('myApp', [
+  'appControllers',
+  'appFilters'
+]);
