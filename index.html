@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Mana Minyak?</title>
+<title>Mana Minyak?: Petrol / Gas station map for Brunei</title>
 	<!-- mobile viewport -->
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 
@@ -8,19 +8,50 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-	<!-- icons, ipad3, iphone retina, ipad, iphone -->
-	<!-- not working well with Android. Samsung browser seems to work, Chrome doesn't.... -->
-    <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72"   href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon"                 href="ico/apple-touch-icon-57-precomposed.png">
-	<link rel="shortcut icon"                    href="ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57"   href="ico/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72"   href="ico/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60"   href="ico/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="ico/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76"   href="ico/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="ico/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="ico/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="ico/favicon-96x96.png"   sizes="96x96" />
+	<link rel="icon" type="image/png" href="ico/favicon-32x32.png"   sizes="32x32" />
+	<link rel="icon" type="image/png" href="ico/favicon-16x16.png"   sizes="16x16" />
+	<link rel="icon" type="image/png" href="ico/favicon-128.png"     sizes="128x128" />
+	<meta name="application-name" content="Minyak Mana?"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage"         content="ico/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo"   content="ico/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="ico/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo"   content="ico/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="ico/mstile-310x310.png" />
+
+
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+
+
+	<meta property="og:title" content="Mana Minyak?">
+	<meta property="og:description" content="A map showing the closest petrol / gas station">
+	<meta property="og:image" content="https://thewheat.github.io/brunei-map-petrol/ico/opengraph.png">
+	<meta property="og:url" content="https://thewheat.github.io/brunei-map-petrol/">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@thewheat">
+	<meta name="twitter:title" content="Mana Minyak?">
+	<meta name="twitter:url" content="https://thewheat.github.io/brunei-map-petrol/">
+	<meta name="twitter:description" content="A map showing the closest petrol / gas station">
+	<meta name="twitter:image" content="https://thewheat.github.io/brunei-map-petrol/ico/apple-touch-icon-144x144.png">
+
 
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-app="myApp">
 	<div id="stationCtrl" ng-controller="stationCtrl" class="fluid" >
-		<input id="find" type="button" ng-cloak class="ng-cloak" value="Find Closest Shell Station" ng-click="findLocation()">
+		<input id="find" type="button" ng-cloak class="ng-cloak" value="Find Closest Petrol Station" ng-click="findLocation()">
 		<div id="search">
 			<strong>Search:</strong> <label><input type="checkbox" ng-model="searchOpen" ng-change="searchMapAndUpdate()">Currently open</label><br>
 			<span ng-repeat="facility in facilities" class="search" name="facility">
