@@ -51,18 +51,39 @@ appControllers.controller('stationCtrl', ['$scope', '$filter', '$http', '$timeou
                 "&index=" + destination.id +
                 "";
         }
+        function getURLfromArray(source, array){
+            var data = {
+                destinations: [],
+                names: [],
+                distances: [],
+                ids: []
+            };
+            for(var i = 0; i < array.length; i++){
+                data.destinations.push(array[i].lat+","+array[i].lng);
+                data.names.push(array[i].name);
+                data.distances.push(array[i].distance);
+                data.ids.push(array[i].id);
+            }
+            return "//polar-cliffs-15537.herokuapp.com/distances.php?" +
+                "&origins=" + source.lat + "," + source.lng +
+                "&destinations="+data.destinations.join("|") +
+                // for debugging
+                // "&name=" + data.names.join("|") +
+                // "&distance=" + data.distances.join("|") +
+                // "&index=" + data.ids.join("|") +
+                "";
+        }
+
         var closest = $filter('limitTo')($filter('orderBy')(data, 'distance'), 5);
         $scope.findLocationMessage = "Finding driving distances";
 
         var promises = [];
-        for(var i = 0; i < closest.length; i++){
-            promises.push($http.get(getURL($scope.location,closest[i])));
-        }
+        promises.push($http.get(getURLfromArray($scope.location,closest)));
         $q.all(promises).then(function (results) {
             var answers = [];
             for(var i = 0; i < closest.length; i++){
-                $scope.stations[closest[i].id].actualDistance = (results[i].data.distance.value/1000);
-                $scope.stations[closest[i].id].actualTime = (results[i].data.duration.text);
+                $scope.stations[closest[i].id].actualDistance = (results[0].data[i].distance.value/1000);
+                $scope.stations[closest[i].id].actualTime = (results[0].data[i].duration.text);
             }
             $timeout(function(){
                 $scope.$apply();
