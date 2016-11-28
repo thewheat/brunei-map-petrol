@@ -7,7 +7,7 @@ appControllers.controller('stationCtrl', ['$scope', '$filter', '$http', '$timeou
     $scope.searchFacilityData = {};
     $scope.facilities = ["ATM","Car Wash","Pump","Pump (foreign)","Service Center","Shop","Surau","Toilet"];
     $scope.searchOpen = true;
-    $scope.searchActualDistances = false;
+    $scope.searchActualDistances = true;
 
     $http.get("data/stations.json").success(function(data) {
         for(var i = 0; i < data.length; i++){
