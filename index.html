@@ -53,7 +53,9 @@
 	<div id="stationCtrl" ng-controller="stationCtrl" class="fluid" >
 		<input id="find" type="button" ng-cloak class="ng-cloak" value="Find Closest Petrol Station" ng-click="findLocation()">
 		<div id="search">
-			<strong>Search:</strong> <label><input type="checkbox" ng-model="searchOpen" ng-change="searchMapAndUpdate()">Currently open</label><br>
+			<strong>Search:</strong>
+			<label><input type="checkbox" ng-model="searchOpen" ng-change="searchMapAndUpdate()">Currently Open</label> 
+			<label><input type="checkbox" ng-model="searchActualDistances" ng-change="searchMapAndUpdate()">Driving Distances <a href="#estimates">[*]</a></label><br>
 			<span ng-repeat="facility in facilities" class="search" name="facility">
 					<label ng-show="facility"><input type="checkbox" ng-model="searchFacilityData[facility]" ng-change="searchMapAndUpdate()" value="{{facility}}">{{facility | nbsp}}</label>
 			</span>
@@ -62,11 +64,16 @@
 		<div ng-class="{selected: findLocationMessage, hide: !findLocationMessage}" id="info">{{findLocationMessage}} <a href="#" ng-show="findLocationMessage" ng-click="dismissInfo()">[x]</a></div>
 		<h3 class="error" ng-cloak="filteredStations" ng-hide="filteredStations">None available! Remove search filters to show results</h3>
 		<ol class="stations">
-			<li ng-repeat="station in filteredStations | orderBy:'distance' | limitTo: 5" class="row" ng-class-even="'even'" ng-class-odd="'odd'">
+			<li ng-repeat="station in filteredStations | orderBy: ['actualDistance', 'distance'] | limitTo: 5" class="row" ng-class-even="'even'" ng-class-odd="'odd'">
+					<div class="distance-info">
+						<strong ng-show="station.distance" class='distance'>
+						<span ng-show="station.actualDistance">{{station.actualDistance.toFixed(2)}}</span><span ng-hide="station.actualDistance">{{station.distance.toFixed(2)}}</span>km<a href="#estimates" ng-hide="station.actualDistance" class="estimate">*</a>
+						</strong>
+						<div ng-show="station.actualTime" class="time">{{station.actualTime}}</div>
+						<h5 class="directions"><a target="_blank" href="https://www.google.com/maps/dir/{{location.lat}},{{location.lng}}/{{station.lat}},{{station.lng}}/@{{location.lat}},{{location.lng}},16z/data=!4m2!4m1!3e0">Directions</a></h5>
+					</div>
 					<span class='name'><a href="" ng-click="clickMarker(station.id)">{{station.name}}</a></span>
-					<strong ng-show="station.distance" class='distance'>{{station.distance.toFixed(2)}}km</strong>
 					<div class='hours'>{{station.open | formatTime}} - {{station.close | formatTime}}</div>
-					<h5 class="directions"><a target="_blank" href="https://www.google.com/maps/dir/{{location.lat}},{{location.lng}}/{{station.lat}},{{station.lng}}/@{{location.lat}},{{location.lng}},16z/data=!4m2!4m1!3e0">Directions</a></h5>
 					<span ng-if="station.facilities && station.facilities.length > 0">
 						<ul class="facilities">
 							<li class="facility" ng-repeat="facility in station.facilities">{{facility | nbsp}}</li>
@@ -76,7 +83,15 @@
 			</li>
   		</ol>
 </div>
-	<div id="footer">Data from <a href="http://www.bsm.com.bn/index.php/business-partner/retail-station">bsm.com.bn</a>. Source: <a href="https://github.com/thewheat/brunei-map-petrol/"> on Github</a></div>
+	<div id="footer">
+	<div class="disclaimer"><a name="estimates">[*]</a>: "Driving Distances" details<ul>
+	<li>When disabled, it will use estimated distances based on straight line distance and not actual driving routes and will be much quicker to calculate</li>
+	<li>When enabled, it will take the top 5 closest by a straight line and calculate driving distances for those</li>
+	</ul>
+	</div> 
+
+	<p>Data from <a href="http://www.bsm.com.bn/index.php/business-partner/retail-station">bsm.com.bn</a>. Source: <a href="https://github.com/thewheat/brunei-map-petrol/"> on Github</a></p>
+	</div>
 	<script src="lib/angular/angular.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyAReROBMpqXsgxtK28CAVvYflWxAfzATmY"></script>
 

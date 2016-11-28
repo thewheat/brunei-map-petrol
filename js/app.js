@@ -7,6 +7,7 @@ appControllers.controller('stationCtrl', ['$scope', '$filter', '$http', '$timeou
     $scope.searchFacilityData = {};
     $scope.facilities = ["ATM","Car Wash","Pump","Pump (foreign)","Service Center","Shop","Surau","Toilet"];
     $scope.searchOpen = true;
+    $scope.searchActualDistances = false;
 
     $http.get("data/stations.json").success(function(data) {
         for(var i = 0; i < data.length; i++){
@@ -26,10 +27,18 @@ appControllers.controller('stationCtrl', ['$scope', '$filter', '$http', '$timeou
         $scope.calculateDistances();
         $scope.showClosest($scope.filteredStations);
 
-        $scope.findLocationMessage = "Calculating driving distance...";
-        $timeout(function(){
-            $scope.calculateActualDistances($scope.filteredStations);
-        },100);
+        // clear old data
+        for(var i = 0; i < $scope.stations.length; i++){
+            $scope.stations[i].actualDistance = null;
+            $scope.stations[i].actualTime = null;
+        }
+
+        if($scope.searchActualDistances){
+            $scope.findLocationMessage = "Calculating driving distance...";
+            $timeout(function(){
+                $scope.calculateActualDistances($scope.filteredStations);
+            },100);
+        }
     };
 
     $scope.calculateActualDistances = function(data){
@@ -43,7 +52,7 @@ appControllers.controller('stationCtrl', ['$scope', '$filter', '$http', '$timeou
                 "";
         }
         var closest = $filter('limitTo')($filter('orderBy')(data, 'distance'), 5);
-        $scope.findLocationMessage = "Finding accurate distances";
+        $scope.findLocationMessage = "Finding driving distances";
 
         var promises = [];
         for(var i = 0; i < closest.length; i++){
@@ -52,7 +61,8 @@ appControllers.controller('stationCtrl', ['$scope', '$filter', '$http', '$timeou
         $q.all(promises).then(function (results) {
             var answers = [];
             for(var i = 0; i < closest.length; i++){
-                $scope.stations[closest[i].id].distance = (results[i].data.distance.value/1000);
+                $scope.stations[closest[i].id].actualDistance = (results[i].data.distance.value/1000);
+                $scope.stations[closest[i].id].actualTime = (results[i].data.duration.text);
             }
             $timeout(function(){
                 $scope.$apply();
