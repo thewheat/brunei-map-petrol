@@ -43,7 +43,7 @@ appControllers.controller('stationCtrl', ['$scope', '$filter', '$http', '$timeou
 
     $scope.calculateActualDistances = function(data){
         function getURL(source, destination){
-            return "//polar-cliffs-15537.herokuapp.com/distances.php?" +
+            return "//thewheatfield.org/hrk/distances.php?" +
                 "&origins=" + source.lat + "," + source.lng +
                 "&destinations="+closest[i].lat+","+closest[i].lng+
                 "&name=" + destination.name +
@@ -64,7 +64,7 @@ appControllers.controller('stationCtrl', ['$scope', '$filter', '$http', '$timeou
                 data.distances.push(array[i].distance);
                 data.ids.push(array[i].id);
             }
-            return "//polar-cliffs-15537.herokuapp.com/distances.php?" +
+            return "//thewheatfield.org/hrk/distances.php?" +
                 "&origins=" + source.lat + "," + source.lng +
                 "&destinations="+data.destinations.join("|") +
                 // for debugging
